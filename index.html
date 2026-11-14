@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ha Gia Bao | IC Design, FPGA RTL &amp; Embedded Linux Portfolio</title>
+  <title>Ha Gia Bao | Digital IC &amp; FPGA RTL Engineering Portfolio</title>
   <meta
     name="description"
-    content="Engineering portfolio of Ha Gia Bao — IC Design student at FPT University focused on FPGA RTL design, Embedded Linux kernel drivers on ARM Cortex-A9, and hardware-software co-verification."
+    content="Portfolio of Ha Gia Bao — IC Design student at FPT University specializing in synthesizable Verilog-2001 RTL design, FPGA accelerators on AMD Kria KR260, and self-checking hardware verification."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="./styles.css" />
@@ -25,7 +25,7 @@
         <a class="brand-monogram" href="#about" aria-label="Ha Gia Bao Home">
           <span class="mono-accent">HGB</span>
           <span class="mono-sep" aria-hidden="true">//</span>
-          <span>RTL &amp; EMBEDDED SYSTEMS</span>
+          <span>IC DESIGN &amp; FPGA RTL</span>
         </a>
         <span class="status-pill">
           <span class="status-dot" aria-hidden="true"></span>
@@ -41,18 +41,43 @@
         aria-controls="primary-nav"
         aria-label="Toggle navigation menu"
       >
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </button>
 
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <a href="#about">Overview</a>
-        <a href="#domains">Capabilities</a>
-        <a href="#projects">Semester Projects</a>
-        <a href="#terminal">CLI</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <button
+          type="button"
+          class="btn-icon"
+          id="theme-toggle"
+          aria-label="Switch color theme"
+          title="Toggle Dark / Light theme"
+        >
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="theme-label mono">Theme</span>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm" id="nav-preview-cv">
+          Preview CV
+        </button>
         <a class="btn btn-primary btn-sm" href="./Ha_Gia_Bao_Resume.pdf" download="Ha_Gia_Bao_Resume.pdf">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
           Resume PDF
         </a>
       </nav>
@@ -60,65 +85,70 @@
   </header>
 
   <main id="main-content">
-    <!-- Hero Bento Section -->
+    <!-- Hero Section -->
     <section id="about" class="section hero-section">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="eyebrow-row">
-            <span class="eyebrow mono">IC DESIGN &bull; FPGA RTL &bull; EMBEDDED LINUX</span>
-          </div>
-          <h1>Hardware RTL, FPGA Accelerators &amp; Embedded Linux Systems</h1>
+          <div class="eyebrow mono">INTEGRATED CIRCUIT DESIGN // FPT UNIVERSITY</div>
+          <h1>Digital IC &amp; FPGA RTL Engineering Portfolio</h1>
           <p class="hero-lead">
-            I am <strong>Ha Gia Bao</strong>, an <strong>IC Design</strong> undergraduate at
-            <strong>FPT University</strong> (Ho Chi Minh City). My engineering work spans
-            synthesizable <strong>Verilog-2001 RTL pipelines</strong> on AMD/Xilinx FPGAs,
-            <strong>Linux 6.1.90 LTS kernel drivers</strong> and multi-threaded POSIX daemons on
-            ARMv7-A Cortex-A9, and bit-exact <strong>Python-to-RTL verification</strong>.
+            I am <strong>Ha Gia Bao</strong>, an <strong>IC Design</strong> student at
+            <strong>FPT University</strong> (Ho Chi Minh City). I design synthesizable
+            <strong>Verilog-2001</strong> streaming architectures, error-injection &amp; digital
+            communication pipelines, and bit-exact <strong>Python-to-RTL</strong> verification flows
+            validated through Vivado Static Timing Analysis and hardware bring-up on
+            <strong>AMD Kria KR260</strong>.
           </p>
 
-          <div class="hero-metrics" aria-label="Verified engineering highlights">
-            <div class="metric-card">
-              <span class="metric-value mono text-emerald">20 / 20</span>
-              <span class="metric-label">Kernel Driver Labs PASS</span>
+          <!-- 4-Card KPI Strip -->
+          <div class="hero-kpi-grid" aria-label="Verified engineering KPIs">
+            <div class="kpi-card">
+              <span class="kpi-value mono text-emerald">516,133</span>
+              <span class="kpi-label">KR260 Datapath Checks (0 Err)</span>
             </div>
-            <div class="metric-card">
-              <span class="metric-value mono text-cyan">154,373</span>
-              <span class="metric-label">SECDED+BPSK Checks (0 Err)</span>
+            <div class="kpi-card">
+              <span class="kpi-value mono text-cyan">154,373</span>
+              <span class="kpi-label">SECDED+BPSK Checks (0 Err)</span>
             </div>
-            <div class="metric-card">
-              <span class="metric-value mono text-cyan">516,133</span>
-              <span class="metric-label">KR260 Datapath Checks (0 Err)</span>
+            <div class="kpi-card">
+              <span class="kpi-value mono text-emerald">100 MHz</span>
+              <span class="kpi-label">KR260 Timing Closure MET</span>
             </div>
-            <div class="metric-card">
-              <span class="metric-value mono text-emerald">100 MHz</span>
-              <span class="metric-label">KR260 Timing Closure Met</span>
+            <div class="kpi-card">
+              <span class="kpi-value mono text-cyan">50 MHz</span>
+              <span class="kpi-label">SECDED+BPSK Timing MET</span>
             </div>
           </div>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" x2="10" y2="21" width="7" height="7"></rect>
+              </svg>
               Explore Semester Projects
             </a>
             <button type="button" class="btn btn-secondary" id="open-resume-modal">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
               Preview CV Inline
             </button>
             <a class="btn btn-ghost" href="./Ha_Gia_Bao_Resume.pdf" download="Ha_Gia_Bao_Resume.pdf">
-              Download Resume PDF
-            </a>
-            <a
-              class="btn btn-ghost"
-              href="https://github.com/weliuliu123-byte"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Profile
+              Download PDF
             </a>
           </div>
         </div>
 
+        <!-- Engineer Identity Card -->
         <aside class="identity-card" aria-label="Engineer profile card">
           <div class="identity-top">
-            <div class="avatar-ring">
+            <div class="avatar-wrap">
               <img
                 src="./assets/avatar.jpg"
                 alt="Portrait of Ha Gia Bao"
@@ -128,49 +158,44 @@
               />
             </div>
             <div class="identity-meta">
-              <div class="identity-badge mono">ENGINEER PROFILE</div>
+              <span class="identity-kicker mono">HARDWARE &amp; RTL ENGINEER</span>
               <h2 class="identity-name">Ha Gia Bao</h2>
-              <p class="identity-role">IC Design &amp; Embedded Systems Engineer</p>
+              <p class="identity-role">RTL Design &amp; FPGA Verification</p>
               <p class="identity-edu">FPT University &bull; Ho Chi Minh City</p>
             </div>
           </div>
 
           <div class="identity-divider"></div>
 
-          <div class="stack-section">
-            <span class="stack-heading mono">HARDWARE &amp; SOFTWARE STACK</span>
-            <ul class="stack-pills" aria-label="Core technical stack">
+          <div class="stack-block">
+            <span class="stack-heading mono">CORE TOOLS &amp; FLOW</span>
+            <ul class="pill-row" aria-label="Hardware and EDA tools">
               <li>Verilog-2001</li>
-              <li>C / Modern C++</li>
-              <li>Linux Kernel Modules</li>
-              <li>Vivado / XSim</li>
-              <li>QEMU ARMv7-A</li>
+              <li>Vivado &amp; XSim</li>
+              <li>AMD Kria KR260</li>
+              <li>AXI4-Lite</li>
               <li>Python Golden Models</li>
+              <li>C / Modern C++</li>
             </ul>
           </div>
 
           <div class="identity-links">
+            <a class="id-link-row" href="mailto:weliuliu132@gmail.com">
+              <span class="id-link-key mono">Email</span>
+              <span class="id-link-val mono">weliuliu132@gmail.com</span>
+            </a>
             <a
-              class="id-link-item"
+              class="id-link-row"
               href="https://github.com/weliuliu123-byte"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span class="mono text-muted">GitHub</span>
-              <span class="mono text-cyan">weliuliu123-byte</span>
+              <span class="id-link-key mono">GitHub</span>
+              <span class="id-link-val mono text-cyan">weliuliu123-byte</span>
             </a>
-            <a
-              class="id-link-item"
-              href="https://github.com/weliuliu123-byte/LOS"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="mono text-muted">Featured Repo</span>
-              <span class="mono text-emerald">weliuliu123-byte/LOS</span>
-            </a>
-            <a class="id-link-item" href="mailto:weliuliu132@gmail.com">
-              <span class="mono text-muted">Email</span>
-              <span class="mono">weliuliu132@gmail.com</span>
+            <a class="id-link-row" href="#projects">
+              <span class="id-link-key mono">Focus</span>
+              <span class="id-link-val mono text-emerald">DGT302 &bull; COS201</span>
             </a>
           </div>
         </aside>
@@ -178,502 +203,509 @@
     </section>
 
     <!-- Core Engineering Capabilities -->
-    <section id="domains" class="section section-bordered">
+    <section id="capabilities" class="section section-bordered">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow mono">CORE CAPABILITIES</p>
-          <h2>Three Engineering Pillars</h2>
+          <p class="eyebrow mono">ENGINEERING CAPABILITIES</p>
+          <h2>Core Hardware &amp; Verification Disciplines</h2>
           <p class="section-subtitle">
-            Hands-on hardware RTL design, Linux kernel space programming, and deterministic co-verification built across real semester projects.
+            From synthesizable RTL modules and deterministic datapath synchronization to Vivado STA and hardware bring-up.
           </p>
         </div>
 
-        <div class="domains-grid">
-          <article class="card domain-card">
-            <div class="card-tag mono text-cyan">01 // SILICON &amp; FPGA</div>
-            <h3>RTL &amp; FPGA Accelerator Design</h3>
+        <div class="capabilities-grid">
+          <article class="card cap-card">
+            <div class="cap-icon text-cyan" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <span class="card-kicker mono text-cyan">01 // RTL ARCHITECTURE</span>
+            <h3>Synthesizable Verilog-2001</h3>
             <p>
-              Designing synthesizable Verilog-2001 streaming datapaths, shift-register 3&times;3
-              window generators, LFSR error-injection channels, and closing static timing on AMD/Xilinx targets.
+              Designing 3&times;3 shift-register sliding windows, cascaded streaming pipelines,
+              LFSR error-injection channels, and stage-to-stage <code>valid</code>/<code>done</code> handshaking.
             </p>
-            <ul class="tag-list" aria-label="RTL and FPGA skills">
-              <li>Verilog-2001</li>
-              <li>Streaming Datapaths</li>
-              <li>3&times;3 Window &amp; Line Buffers</li>
-              <li>Vivado Synthesis &amp; STA</li>
-              <li>AMD Kria KR260</li>
+            <ul class="pill-row">
+              <li>window_3x3.v</li>
+              <li>tx_rx_dsp_top.v</li>
+              <li>bit_flip_channel.v</li>
             </ul>
           </article>
 
-          <article class="card domain-card">
-            <div class="card-tag mono text-emerald">02 // KERNEL &amp; EMBEDDED</div>
-            <h3>Embedded Linux &amp; Kernel Drivers</h3>
+          <article class="card cap-card">
+            <div class="cap-icon text-emerald" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <span class="card-kicker mono text-emerald">02 // FPGA &amp; TIMING CLOSURE</span>
+            <h3>Vivado Synthesis &amp; STA</h3>
             <p>
-              Cross-compiling Linux 6.1.90 LTS kernels and BusyBox initramfs for ARM Cortex-A9,
-              writing character drivers with mutex/atomic synchronization, and building POSIX real-time daemons.
+              Taking RTL through synthesis, implementation, and Static Timing Analysis on
+              AMD Kria K26 (100 MHz) and 50 MHz FPGA targets with positive setup/hold margins.
             </p>
-            <ul class="tag-list" aria-label="Embedded Linux skills">
-              <li>Linux 6.1.90 LTS</li>
-              <li>Character Drivers &amp; IOCTL</li>
-              <li>sysfs / procfs / atomic_t</li>
-              <li>MTD &amp; JFFS2 Flash</li>
-              <li>POSIX Multi-threading</li>
+            <ul class="pill-row">
+              <li>Vivado STA</li>
+              <li>WNS / WHS Closure</li>
+              <li>AXI4-Lite &amp; MMIO</li>
             </ul>
           </article>
 
-          <article class="card domain-card">
-            <div class="card-tag mono text-cyan">03 // VERIFICATION &amp; BRING-UP</div>
-            <h3>Hardware-Software Co-Verification</h3>
+          <article class="card cap-card">
+            <div class="cap-icon text-cyan" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <span class="card-kicker mono text-cyan">03 // CO-VERIFICATION</span>
+            <h3>Golden-Model &amp; Board Bring-Up</h3>
             <p>
-              Validating RTL designs against Python golden models across hundreds of thousands of
-              self-checking transactions, plus ARM Linux MMIO bring-up and runtime profiling.
+              Building bit-exact Python golden models, self-checking XSim testbenches covering
+              hundreds of thousands of pixel/DSP checks, and KR260 Linux <code>/dev/mem</code> validation.
             </p>
-            <ul class="tag-list" aria-label="Verification skills">
+            <ul class="pill-row">
               <li>Python Golden Models</li>
-              <li>Self-Checking Testbenches</li>
-              <li>/dev/mem &amp; mmap() MMIO</li>
-              <li>GDB &amp; Valgrind</li>
-              <li>perf &amp; cyclictest</li>
+              <li>XSim Waveforms</li>
+              <li>KR260 /dev/mem</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Semester Projects Section -->
+    <!-- 2-Tier Full-Width Visual Case Studies -->
     <section id="projects" class="section section-bordered">
       <div class="container">
-        <div class="projects-header-bar">
-          <div class="section-header projects-heading">
-            <p class="eyebrow mono">VERIFIED SEMESTER WORK</p>
-            <h2>Projects Completed This Semester</h2>
-            <p class="section-subtitle">
-              Real engineering projects built and verified across Embedded Linux (LOS201), FPGA Communications (COS201), and FPGA Image DSP (DGT302).
-            </p>
-          </div>
-
-          <div class="filter-bar" role="group" aria-label="Filter projects by engineering domain">
-            <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">
-              All Projects <span class="count-pill mono">3</span>
-            </button>
-            <button type="button" class="filter-btn" data-filter="fpga" aria-pressed="false">
-              FPGA &amp; RTL Design <span class="count-pill mono">2</span>
-            </button>
-            <button type="button" class="filter-btn" data-filter="linux" aria-pressed="false">
-              Embedded Linux &amp; Drivers <span class="count-pill mono">1</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="projects-stack">
-          <!-- Project 1: LOS201 -->
-          <article class="card project-card" data-category="linux">
-            <div class="project-layout">
-              <div class="project-info">
-                <div class="project-meta-row">
-                  <span class="badge badge-emerald mono">LOS201 // EMBEDDED LINUX</span>
-                  <span class="role-badge mono">Sole Author</span>
-                </div>
-                <h3>Embedded Linux Systems on ARMv7-A Cortex-A9</h3>
-                <p class="project-summary">
-                  End-to-end embedded Linux engineering covering Linux 6.1.90 LTS kernel bring-up,
-                  20+ character device driver modules, persistent JFFS2 flash storage, and a
-                  4-thread real-time POSIX monitoring daemon on QEMU <code>vexpress-a9</code>.
-                </p>
-                <ul class="bullet-list">
-                  <li>
-                    <strong>Kernel &amp; Platform Bring-Up:</strong> Cross-compiled Linux <code>6.1.90</code> LTS,
-                    BusyBox <code>1.35.0</code> static initramfs, and U-Boot boot flows using
-                    <code>arm-linux-gnueabihf-gcc</code> (GCC 13.3.0).
-                  </li>
-                  <li>
-                    <strong>Drivers, IOCTL &amp; Flash:</strong> Built <code>/dev/lab2</code> (Major 240, mutex buffer),
-                    <strong>20/20</strong> driver extension labs (<code>sysfs</code>, <code>procfs</code>,
-                    <code>atomic_t</code>, unlocked IOCTL), <code>/dev/asgn1</code>, lock-free <code>/dev/counter</code>,
-                    and 32MB MTD/<code>nandsim</code> JFFS2 storage.
-                  </li>
-                  <li>
-                    <strong>Real-Time Userspace &amp; Diagnostics:</strong> Implemented the 4-thread POSIX sensor
-                    daemon (<code>sms_app</code> + <code>/dev/sms_sensor</code>) and profiled with GDB,
-                    Valgrind (<code>0 leaks</code>), <code>perf</code>, and <code>cyclictest</code>.
-                  </li>
-                </ul>
-                <div class="project-links">
-                  <a
-                    class="btn btn-primary btn-sm"
-                    href="https://github.com/weliuliu123-byte/LOS"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Repository (weliuliu123-byte/LOS)
-                  </a>
-                </div>
-              </div>
-
-              <!-- Interactive Technical Inspector -->
-              <div class="inspector-panel" data-inspector>
-                <div class="inspector-tabs" role="tablist" aria-label="LOS201 technical views">
-                  <button type="button" class="insp-tab is-active" role="tab" aria-selected="true" data-tab="pipeline">
-                    Architecture
-                  </button>
-                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="ownership">
-                    My Ownership
-                  </button>
-                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="metrics">
-                    Verification
-                  </button>
-                </div>
-
-                <div class="insp-pane is-active" data-pane="pipeline">
-                  <p class="insp-caption mono">USERSPACE &rarr; VFS/IOCTL &rarr; KERNEL DRIVERS &rarr; QEMU ARMv7-A</p>
-                  <div class="stage-flow">
-                    <span class="stage-chip">BusyBox Initramfs &amp; 4-Thread sms_app</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">VFS Syscalls (open/read/write/ioctl)</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip is-highlight">/dev/lab2, /dev/asgn1, /dev/counter</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip is-highlight">/dev/sms_sensor + sysfs/procfs</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">32MB MTD / nandsim JFFS2</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">QEMU vexpress-a9 (Linux 6.1.90)</span>
-                  </div>
-                </div>
-
-                <div class="insp-pane" data-pane="ownership" hidden>
-                  <p class="insp-caption mono">SOLE AUTHORSHIP &amp; MODULES BUILT</p>
-                  <ul class="owner-list">
-                    <li><code>labs/lab01</code> &mdash; Kernel 6.1.90 LTS, U-Boot &amp; BusyBox rootfs build</li>
-                    <li><code>labs/lab02</code> &mdash; Base character driver <code>/dev/lab2</code> + JFFS2 flash</li>
-                    <li><code>assignments/driver-exercises</code> &mdash; All 20 character driver extension modules</li>
-                    <li><code>assignments/assignment01</code> &mdash; 4-command IOCTL driver &amp; lock-free misc counter</li>
-                    <li><code>assignments/assignment02</code> &mdash; <code>sms_sensor_driver.c</code> &amp; 4-thread POSIX daemon</li>
-                    <li><code>labs/lab03</code> &mdash; GDB remote triage, Valgrind, <code>perf</code> &amp; <code>cyclictest</code></li>
-                  </ul>
-                </div>
-
-                <div class="insp-pane" data-pane="metrics" hidden>
-                  <p class="insp-caption mono">VERIFIED LABS &amp; DIAGNOSTIC STATUS</p>
-                  <div class="mini-metrics-grid">
-                    <div class="mini-metric">
-                      <span class="mini-label mono">Driver Exercises</span>
-                      <span class="mini-val mono text-emerald">20 / 20 PASS</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">Target Machine</span>
-                      <span class="mini-val mono">Cortex-A9 512MB</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">Kernel ABI</span>
-                      <span class="mini-val mono">Linux 6.1.90 SMP</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">Assignments 01 &amp; 02</span>
-                      <span class="mini-val mono text-emerald">PASS (RT Daemon)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2: COS201 -->
-          <article class="card project-card" data-category="fpga">
-            <div class="project-layout">
-              <div class="project-info">
-                <div class="project-meta-row">
-                  <span class="badge badge-cyan mono">COS201 // FPGA COMMUNICATIONS</span>
-                  <span class="role-badge mono">System Integration &amp; Channel RTL</span>
-                </div>
-                <h3>FPGA SECDED (8,4) + BPSK Communication Pipeline</h3>
-                <p class="project-summary">
-                  Deterministic FPGA communication system combining Extended Hamming SECDED (8,4)
-                  error correction, BPSK modulation/demodulation, LFSR-based channel bit-flip &amp;
-                  noise injection, and UART end-to-end verification against a Python golden model.
-                </p>
-                <ul class="bullet-list">
-                  <li>
-                    <strong>Pipeline Integration (<code>tx_rx_dsp_top.v</code>):</strong> Integrated all six
-                    DSP stages with stage-to-stage <code>valid</code>/<code>done</code> handshaking,
-                    <code>i_start</code>/<code>o_done</code> transaction control, and synchronous active-low reset.
-                  </li>
-                  <li>
-                    <strong>Error-Injection Channel (<code>bit_flip_channel.v</code>):</strong> Designed
-                    deterministic LFSR-driven single-bit and double-bit error injection with collision
-                    handling and persistent LFSR state across transactions.
-                  </li>
-                  <li>
-                    <strong>System-Level Verification:</strong> Verified <strong>154,373 self-checking DSP
-                    comparisons (0 errors)</strong> across 384 transactions and 24,576 BPSK/noise samples,
-                    plus <strong>96 UART end-to-end requests (577 checks, 0 errors)</strong>.
-                  </li>
-                </ul>
-                <div class="project-links">
-                  <a
-                    class="btn btn-primary btn-sm"
-                    href="https://github.com/ntue2719-commits/secDED-bpsk-fpga"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Team Repository (secDED-bpsk-fpga)
-                  </a>
-                </div>
-              </div>
-
-              <!-- Interactive Technical Inspector -->
-              <div class="inspector-panel" data-inspector>
-                <div class="inspector-tabs" role="tablist" aria-label="COS201 technical views">
-                  <button type="button" class="insp-tab is-active" role="tab" aria-selected="true" data-tab="pipeline">
-                    RTL Pipeline
-                  </button>
-                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="ownership">
-                    My RTL Scope
-                  </button>
-                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="metrics">
-                    Synthesis &amp; Sim
-                  </button>
-                </div>
-
-                <div class="insp-pane is-active" data-pane="pipeline">
-                  <p class="insp-caption mono">COMPLETE 6-STAGE DSP + UART DATAFLOW</p>
-                  <div class="stage-flow">
-                    <span class="stage-chip">UART RX &amp; Controller</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip is-highlight">tx_rx_dsp_top</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">Hamming SECDED (8,4) Enc</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip is-highlight">bit_flip_channel</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">BPSK Modulator</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">LFSR Noise Injector</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">BPSK Demodulator</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">Hamming SECDED Dec</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">UART TX</span>
-                  </div>
-                </div>
-
-                <div class="insp-pane" data-pane="ownership" hidden>
-                  <p class="insp-caption mono">ASSIGNED RTL MODULES &amp; REPORT CHAPTER</p>
-                  <ul class="owner-list">
-                    <li><code>tx_rx_dsp_top.v</code> &mdash; Top DSP datapath orchestrating all 6 stages, valid/done handshakes &amp; reset behavior</li>
-                    <li><code>bit_flip_channel.v</code> &mdash; LFSR single-bit / double-bit error modes, collision handling &amp; persistent state</li>
-                    <li><strong>System Verification</strong> &mdash; End-to-end <code>tx_rx_dsp_top</code> &amp; <code>fpga_top</code> UART regression integration</li>
-                    <li><strong>Technical Report</strong> &mdash; Authored Chapter 1 (System Overview &amp; RTL Architecture)</li>
-                  </ul>
-                </div>
-
-                <div class="insp-pane" data-pane="metrics" hidden>
-                  <p class="insp-caption mono">VERIFICATION &amp; FPGA RESOURCE UTILIZATION (50 MHz)</p>
-                  <div class="mini-metrics-grid">
-                    <div class="mini-metric">
-                      <span class="mini-label mono">DSP Verification</span>
-                      <span class="mini-val mono text-emerald">154,373 checks (0 err)</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">UART End-to-End</span>
-                      <span class="mini-val mono text-emerald">577 checks (0 err)</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">Utilization</span>
-                      <span class="mini-val mono">165 LUT / 213 FF</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">Timing &amp; Power</span>
-                      <span class="mini-val mono text-cyan">WNS +17.949 ns &bull; 0.289 W</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3: DGT302 -->
-          <article class="card project-card" data-category="fpga">
-            <div class="project-layout">
-              <div class="project-info">
-                <div class="project-meta-row">
-                  <span class="badge badge-cyan mono">DGT302 // AMD KRIA KR260 SoC</span>
-                  <span class="role-badge mono">Window &amp; Sync RTL Engineer</span>
-                </div>
-                <h3>Median-Sobel Image Processing Accelerator on KR260</h3>
-                <p class="project-summary">
-                  Streaming FPGA SoC accelerator for salt-and-pepper noise removal and Sobel edge
-                  detection in Verilog-2001, integrated via AXI4-Lite with the ARM Processing System
-                  of the AMD Kria KR260 and validated against Python &amp; ARM C baselines.
-                </p>
-                <ul class="bullet-list">
-                  <li>
-                    <strong>3&times;3 Sliding Window Generator (<code>window_3x3.v</code>):</strong> Implemented
-                    3-row shift-register window extraction (<code>p00</code> to <code>p22</code>) instantiated
-                    ahead of both <code>median_3x3</code> and <code>sobel_3x3</code>, including x/y tracking and border rules.
-                  </li>
-                  <li>
-                    <strong>Pipeline Coordinate Synchronization:</strong> Co-designed <code>o_valid</code>,
-                    <code>o_x</code>, and <code>o_y</code> alignment across the cascaded 2-stage 3&times;3
-                    pipeline yielding exact <code>N_OUTPUT = (W-4)(H-4)</code> valid edges.
-                  </li>
-                  <li>
-                    <strong>Timing Closure &amp; Board Bring-Up:</strong> Verified <strong>516,133 datapath checks
-                    (0 errors)</strong> on 512&times;512 frames and <strong>24,041 AXI regression checks</strong>;
-                    met 100 MHz timing on Kria K26 (<code>WNS +0.322 ns</code>) and ran physical KR260 Linux MMIO.
-                  </li>
-                </ul>
-                <div class="project-links">
-                  <a
-                    class="btn btn-primary btn-sm"
-                    href="https://github.com/ntue2719-commits/image-dsp-benchmark"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Team Repository (image-dsp-benchmark)
-                  </a>
-                </div>
-              </div>
-
-              <!-- Interactive Technical Inspector -->
-              <div class="inspector-panel" data-inspector>
-                <div class="inspector-tabs" role="tablist" aria-label="DGT302 technical views">
-                  <button type="button" class="insp-tab is-active" role="tab" aria-selected="true" data-tab="pipeline">
-                    Streaming Core
-                  </button>
-                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="ownership">
-                    My RTL Scope
-                  </button>
-                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="metrics">
-                    KR260 Metrics
-                  </button>
-                </div>
-
-                <div class="insp-pane is-active" data-pane="pipeline">
-                  <p class="insp-caption mono">CASCADED 3&times;3 MEDIAN-SOBEL STREAMING PIPELINE</p>
-                  <div class="stage-flow">
-                    <span class="stage-chip">line_buffer #1</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip is-highlight">window_3x3 #1</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">median_3x3</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">line_buffer #2</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip is-highlight">window_3x3 #2</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">sobel_3x3</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">|Gx|+|Gy| &amp; threshold</span>
-                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
-                    <span class="stage-chip">AXI4-Lite &amp; KR260 MMIO</span>
-                  </div>
-                </div>
-
-                <div class="insp-pane" data-pane="ownership" hidden>
-                  <p class="insp-caption mono">ASSIGNED RTL MODULE &amp; VERIFICATION CHAPTER</p>
-                  <ul class="owner-list">
-                    <li><code>window_3x3.v</code> &mdash; 3-row shift registers, <code>p00..p22</code> parallel neighborhood outputs, x/y border handling</li>
-                    <li><strong>Latency Synchronization</strong> &mdash; Co-authored <code>o_valid</code>, <code>o_x</code>, <code>o_y</code> pipeline alignment for <code>(W-4)(H-4)</code> valid outputs</li>
-                    <li><strong>Module Verification</strong> &mdash; Designed sliding-window testbench scenarios, waveform verification &amp; Section 8.3 documentation</li>
-                  </ul>
-                </div>
-
-                <div class="insp-pane" data-pane="metrics" hidden>
-                  <p class="insp-caption mono">VERIFICATION &amp; AMD KRIA K26 SYNTHESIS (100 MHz)</p>
-                  <div class="mini-metrics-grid">
-                    <div class="mini-metric">
-                      <span class="mini-label mono">512&times;512 Datapath</span>
-                      <span class="mini-val mono text-emerald">516,133 checks (0 err)</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">AXI Two-Frame Reg</span>
-                      <span class="mini-val mono text-emerald">24,041 checks (0 err)</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">K26 Utilization</span>
-                      <span class="mini-val mono">3,560 LUT &bull; 3,406 Reg &bull; 2 BRAM</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="mini-label mono">100 MHz Timing</span>
-                      <span class="mini-val mono text-cyan">WNS +0.322 ns &bull; MET</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Engineering Terminal -->
-    <section id="terminal" class="section section-bordered">
-      <div class="container">
         <div class="section-header">
-          <p class="eyebrow mono">INTERACTIVE CLI</p>
-          <h2>Engineering Console</h2>
+          <p class="eyebrow mono">SEMESTER CASE STUDIES</p>
+          <h2>Featured FPGA &amp; RTL Projects</h2>
           <p class="section-subtitle">
-            Click any command chip or type directly to query my real semester projects, RTL ownership, and system specifications.
+            Two hardware systems built and verified this semester &mdash; click any schematic, waveform, or output image to inspect full resolution.
           </p>
         </div>
 
-        <div class="terminal-shell">
-          <div class="terminal-topbar">
-            <div class="terminal-dots" aria-hidden="true">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-amber"></span>
-              <span class="dot dot-green"></span>
+        <div class="case-studies-stack">
+          <!-- CASE STUDY 01: DGT302 -->
+          <article class="case-study-card" id="project-dgt302">
+            <header class="case-header">
+              <div class="case-title-group">
+                <div class="case-badges">
+                  <span class="badge badge-cyan mono">DGT302 // AMD KRIA KR260 SoC</span>
+                  <span class="badge badge-neutral mono">RTL Owner: window_3x3.v &amp; Coordinate Sync</span>
+                </div>
+                <h3>Median&ndash;Sobel Image Processing Accelerator on AMD Kria KR260</h3>
+              </div>
+              <a
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/ntue2719-commits/image-dsp-benchmark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                GitHub Repository
+              </a>
+            </header>
+
+            <!-- Tier 1: 4 Compact KPI Cards -->
+            <div class="tier1-kpi-row" aria-label="DGT302 verified hardware metrics">
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">TARGET &amp; CLOCK</span>
+                <strong class="tier1-val mono text-cyan">100 MHz</strong>
+                <span class="tier1-sub mono">AMD Kria K26 &bull; Timing MET</span>
+              </div>
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">TIMING &amp; UTILIZATION</span>
+                <strong class="tier1-val mono">3,560 LUTs</strong>
+                <span class="tier1-sub mono">3,406 FFs &bull; 2 BRAM &bull; WNS +0.322 ns</span>
+              </div>
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">DATAPATH 512&times;512</span>
+                <strong class="tier1-val mono text-emerald">516,133</strong>
+                <span class="tier1-sub mono">0 Errors &bull; 64&times;64 &amp; 640&times;480 PASS</span>
+              </div>
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">AXI REGRESSION</span>
+                <strong class="tier1-val mono text-emerald">24,041</strong>
+                <span class="tier1-sub mono">0 Errors &bull; KR260 /dev/mem mmap()</span>
+              </div>
             </div>
-            <span class="terminal-title mono">bao@fpt-ic-lab: ~/semester-projects</span>
-            <button type="button" class="btn-clear mono" id="terminal-clear">clear</button>
-          </div>
 
-          <div class="terminal-chips" role="group" aria-label="Quick terminal commands">
-            <button type="button" class="chip mono" data-cmd="help">help</button>
-            <button type="button" class="chip mono" data-cmd="whoami">whoami</button>
-            <button type="button" class="chip mono" data-cmd="los201">los201</button>
-            <button type="button" class="chip mono" data-cmd="cos201">cos201</button>
-            <button type="button" class="chip mono" data-cmd="dgt302">dgt302</button>
-            <button type="button" class="chip mono" data-cmd="skills">skills</button>
-            <button type="button" class="chip mono" data-cmd="contact">contact</button>
-          </div>
+            <!-- Tier 2: Engineering Notes (Left) + Visual Evidence Tabs (Right) -->
+            <div class="tier2-grid" data-evidence-group>
+              <div class="tier2-notes">
+                <h4>My RTL Ownership &amp; Pipeline Design</h4>
+                <p class="notes-lead">
+                  Streaming FPGA SoC accelerator removing 5% salt-and-pepper noise via 3&times;3 median filtering
+                  and extracting binary Sobel edges with AXI4-Lite ARM Processing System control.
+                </p>
+                <ul class="clean-list">
+                  <li>
+                    <strong><code>window_3x3.v</code> Architecture:</strong> Implemented the 6-DFF shift-register
+                    3&times;3 sliding window (0-cycle combinational tap + 2 column delays), instantiated ahead of
+                    both <code>median_3x3</code> and <code>sobel_3x3</code> to drive parallel <code>p00..p22</code> taps.
+                  </li>
+                  <li>
+                    <strong>Coordinate &amp; Valid Alignment:</strong> Co-designed <code>o_valid</code>,
+                    <code>o_x</code>, and <code>o_y</code> synchronization across both 3&times;3 stages, enforcing
+                    border validity <code>x = 2..W-3, y = 2..H-3</code> for <code>N_OUTPUT = (W-4)(H-4)</code>.
+                  </li>
+                  <li>
+                    <strong>Physical Hardware Validation:</strong> Synthesized cleanly at 100 MHz on Kria K26
+                    (<code>WNS +0.322 ns</code>, <code>WHS +0.013 ns</code>) and validated via Linux
+                    <code>/dev/mem</code> + <code>mmap()</code>.
+                  </li>
+                </ul>
+              </div>
 
-          <div class="terminal-output mono" id="terminal-output" aria-live="polite"></div>
+              <div class="tier2-stage">
+                <div class="evidence-tabs" role="tablist" aria-label="DGT302 visual evidence">
+                  <button type="button" class="ev-tab is-active" role="tab" aria-selected="true" data-tab="schematic">
+                    window_3x3.v Schematic
+                  </button>
+                  <button type="button" class="ev-tab" role="tab" aria-selected="false" data-tab="waveform">
+                    Timing Waveform
+                  </button>
+                  <button type="button" class="ev-tab" role="tab" aria-selected="false" data-tab="pipeline">
+                    4-Stage Image Output
+                  </button>
+                </div>
 
-          <form class="terminal-input-row" id="terminal-form">
-            <label for="terminal-input" class="terminal-prompt mono">bao@fpt-ic-lab:~$</label>
-            <input
-              id="terminal-input"
-              class="terminal-input mono"
-              type="text"
-              autocomplete="off"
-              spellcheck="false"
-              placeholder="Type a command (e.g. help, los201, cos201, dgt302)..."
-            />
-          </form>
+                <!-- Tab 1: Schematic -->
+                <div class="ev-pane is-active" data-pane="schematic">
+                  <button
+                    type="button"
+                    class="figure-btn fig-light"
+                    data-lightbox-src="./assets/04_window_3x3.png"
+                    data-lightbox-caption="window_3x3.v — (a) 3x3 Sliding Window on Raster Stream & (b) 0-Cycle Combinational + 6-DFF Hardware Datapath"
+                    aria-label="Zoom window_3x3.v schematic"
+                  >
+                    <img
+                      src="./assets/04_window_3x3.png"
+                      alt="Hardware datapath and 3x3 sliding window schematic of window_3x3.v"
+                      loading="lazy"
+                    />
+                    <span class="zoom-pill mono">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      Click to enlarge
+                    </span>
+                  </button>
+                  <p class="figure-caption">
+                    <code>window_3x3.v</code> combinational + 6-DFF shift register architecture feeding parallel <code>p00..p22</code> neighborhoods.
+                  </p>
+                </div>
+
+                <!-- Tab 2: Timing Waveform -->
+                <div class="ev-pane" data-pane="waveform" hidden>
+                  <button
+                    type="button"
+                    class="figure-btn fig-light"
+                    data-lightbox-src="./assets/04_window_3x3_waveform.png"
+                    data-lightbox-caption="Cycle-accurate timing waveform of window_3x3.v demonstrating i_en stall freezing and valid gating"
+                    aria-label="Zoom window_3x3.v timing waveform"
+                  >
+                    <img
+                      src="./assets/04_window_3x3_waveform.png"
+                      alt="Cycle-accurate timing waveform of window_3x3.v and valid gating"
+                      loading="lazy"
+                    />
+                    <span class="zoom-pill mono">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      Click to enlarge
+                    </span>
+                  </button>
+                  <p class="figure-caption">
+                    Cycle-accurate timing waveform verifying border gating (<code>x &gt;= 2, y &gt;= 2</code>) and pipeline stall hold behavior.
+                  </p>
+                </div>
+
+                <!-- Tab 3: 4-Stage 1:1 Image Pipeline -->
+                <div class="ev-pane" data-pane="pipeline" hidden>
+                  <div class="stage-image-grid">
+                    <div class="stage-card">
+                      <button
+                        type="button"
+                        class="stage-img-wrap"
+                        data-lightbox-src="./assets/debug_gray.png"
+                        data-lightbox-caption="Stage 1: 8-bit Grayscale 512x512 Input Frame"
+                        aria-label="Zoom grayscale input image"
+                      >
+                        <img src="./assets/debug_gray.png" alt="8-bit grayscale input frame" loading="lazy" />
+                      </button>
+                      <span class="stage-pill mono">01 Grayscale | 8-bit</span>
+                    </div>
+
+                    <div class="stage-card">
+                      <button
+                        type="button"
+                        class="stage-img-wrap"
+                        data-lightbox-src="./assets/debug_noisy.png"
+                        data-lightbox-caption="Stage 2: Deterministic 5% Salt-and-Pepper Impulse Noise"
+                        aria-label="Zoom noisy input image"
+                      >
+                        <img src="./assets/debug_noisy.png" alt="Noisy input frame with salt and pepper noise" loading="lazy" />
+                      </button>
+                      <span class="stage-pill mono">02 Noise | 5% Impulse</span>
+                    </div>
+
+                    <div class="stage-card">
+                      <button
+                        type="button"
+                        class="stage-img-wrap"
+                        data-lightbox-src="./assets/debug_median.png"
+                        data-lightbox-caption="Stage 3: 3x3 Median Filter Output (Impulse Noise Rejected)"
+                        aria-label="Zoom median filter output image"
+                      >
+                        <img src="./assets/debug_median.png" alt="Median 3x3 filtered output frame" loading="lazy" />
+                      </button>
+                      <span class="stage-pill mono">03 Median | 0% Noise</span>
+                    </div>
+
+                    <div class="stage-card">
+                      <button
+                        type="button"
+                        class="stage-img-wrap"
+                        data-lightbox-src="./assets/debug_expected.png"
+                        data-lightbox-caption="Stage 4: Sobel |Gx|+|Gy| + Binary Threshold Output"
+                        aria-label="Zoom binary Sobel edge image"
+                      >
+                        <img src="./assets/debug_expected.png" alt="Binary Sobel edge detection output" loading="lazy" />
+                      </button>
+                      <span class="stage-pill mono">04 Sobel | Binary Edge</span>
+                    </div>
+                  </div>
+                  <p class="figure-caption">
+                    512&times;512 bit-exact verification stages (516,133 datapath pixel checks with 0 errors against Python golden model).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE STUDY 02: COS201 -->
+          <article class="case-study-card" id="project-cos201">
+            <header class="case-header">
+              <div class="case-title-group">
+                <div class="case-badges">
+                  <span class="badge badge-emerald mono">COS201 // DIGITAL COMMUNICATION FPGA</span>
+                  <span class="badge badge-neutral mono">RTL Lead: tx_rx_dsp_top.v &amp; bit_flip_channel.v</span>
+                </div>
+                <h3>FPGA SECDED (8,4) + BPSK Communication Pipeline</h3>
+              </div>
+              <a
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/ntue2719-commits/secDED-bpsk-fpga"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                GitHub Repository
+              </a>
+            </header>
+
+            <!-- Tier 1: 4 Compact KPI Cards -->
+            <div class="tier1-kpi-row" aria-label="COS201 verified hardware metrics">
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">DSP SELF-CHECKING</span>
+                <strong class="tier1-val mono text-emerald">154,373</strong>
+                <span class="tier1-sub mono">0 Errors &bull; 384 Tx &bull; 24,576 Samples</span>
+              </div>
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">UART END-TO-END</span>
+                <strong class="tier1-val mono text-emerald">577</strong>
+                <span class="tier1-sub mono">0 Errors &bull; 96 UART Requests PASS</span>
+              </div>
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">FPGA UTILIZATION</span>
+                <strong class="tier1-val mono text-cyan">165 LUTs</strong>
+                <span class="tier1-sub mono">213 FFs &bull; 0 BRAM &bull; 0 DSP</span>
+              </div>
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">TIMING &amp; POWER (50 MHz)</span>
+                <strong class="tier1-val mono text-cyan">+17.949 ns</strong>
+                <span class="tier1-sub mono">WNS Closure MET &bull; 0.289 W</span>
+              </div>
+            </div>
+
+            <!-- Tier 2: Engineering Notes (Left) + Visual Evidence Stage (Right) -->
+            <div class="tier2-grid" data-evidence-group>
+              <div class="tier2-notes">
+                <h4>My RTL Ownership &amp; System Verification</h4>
+                <p class="notes-lead">
+                  Deterministic FPGA baseband communication pipeline combining Extended Hamming SECDED (8,4)
+                  coding, BPSK modulation/demodulation, LFSR channel error/noise injection, and UART control.
+                </p>
+                <ul class="clean-list">
+                  <li>
+                    <strong>System Integration (<code>tx_rx_dsp_top.v</code>):</strong> Integrated all six
+                    DSP stages under synchronous active-low reset (<code>i_rst_n</code>), managing
+                    <code>i_start</code>/<code>o_done</code> boundaries and stage-to-stage <code>valid</code>/<code>done</code> handshakes.
+                  </li>
+                  <li>
+                    <strong>Error-Injection Channel (<code>bit_flip_channel.v</code>):</strong> Built the
+                    LFSR error injector (<code>seed = 8'hA5</code>, <code>poly = x^8+x^6+x^5+x^4+1</code>)
+                    supporting clean, single-bit, and collision-free double-bit fault modes.
+                  </li>
+                  <li>
+                    <strong>System Regression &amp; Docs:</strong> Verified bit-exactness across
+                    <strong>154,373 DSP checks</strong> and <strong>96 UART end-to-end frames</strong>, and
+                    authored Chapter 1 (System Overview &amp; RTL Architecture).
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tier2-stage">
+                <div class="evidence-tabs" role="tablist" aria-label="COS201 visual evidence">
+                  <button type="button" class="ev-tab is-active" role="tab" aria-selected="true" data-tab="arch">
+                    tx_rx_dsp_top.v Block Diagram
+                  </button>
+                  <button type="button" class="ev-tab" role="tab" aria-selected="false" data-tab="dsp-wave">
+                    tx_rx_dsp_top Waveform
+                  </button>
+                  <button type="button" class="ev-tab" role="tab" aria-selected="false" data-tab="bf-wave">
+                    bit_flip_channel Waveform
+                  </button>
+                </div>
+
+                <!-- Tab 1: Architecture Diagram -->
+                <div class="ev-pane is-active" data-pane="arch">
+                  <button
+                    type="button"
+                    class="figure-btn fig-light"
+                    data-lightbox-src="./assets/tx_rx_dsp_top_architecture.png"
+                    data-lightbox-caption="tx_rx_dsp_top.v — Complete 6-stage SECDED (8,4) + Bit-Flip Channel + BPSK Mod/Demod + LFSR Noise Pipeline"
+                    aria-label="Zoom tx_rx_dsp_top.v architecture block diagram"
+                  >
+                    <img
+                      src="./assets/tx_rx_dsp_top_architecture.png"
+                      alt="Block diagram of the 6-stage tx_rx_dsp_top.v RTL pipeline"
+                      loading="lazy"
+                    />
+                    <span class="zoom-pill mono">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      Click to enlarge
+                    </span>
+                  </button>
+                  <p class="figure-caption">
+                    <code>tx_rx_dsp_top.v</code> 6-stage RTL architecture connecting <code>hamming_encoder</code>, <code>bit_flip_channel</code>, BPSK, LFSR noise, and <code>hamming_decoder</code>.
+                  </p>
+                </div>
+
+                <!-- Tab 2: tx_rx_dsp_top Waveform -->
+                <div class="ev-pane" data-pane="dsp-wave" hidden>
+                  <button
+                    type="button"
+                    class="figure-btn fig-dark"
+                    data-lightbox-src="./assets/waveform_tb_tx_rx_dsp_top.png"
+                    data-lightbox-caption="Vivado XSim behavioral simulation of tb_tx_rx_dsp_top (384 transactions, 154,373 checks, 0 errors)"
+                    aria-label="Zoom tb_tx_rx_dsp_top Vivado XSim waveform"
+                  >
+                    <img
+                      src="./assets/waveform_tb_tx_rx_dsp_top.png"
+                      alt="Vivado XSim behavioral simulation waveform of tb_tx_rx_dsp_top"
+                      loading="lazy"
+                    />
+                    <span class="zoom-pill mono">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      Click to enlarge
+                    </span>
+                  </button>
+                  <p class="figure-caption">
+                    Vivado XSim simulation of <code>tb_tx_rx_dsp_top</code> verifying <code>errors == 0</code> across 384 self-checking transactions.
+                  </p>
+                </div>
+
+                <!-- Tab 3: bit_flip_channel Waveform -->
+                <div class="ev-pane" data-pane="bf-wave" hidden>
+                  <button
+                    type="button"
+                    class="figure-btn fig-dark"
+                    data-lightbox-src="./assets/waveform_tb_bit_flip_channel.png"
+                    data-lightbox-caption="Simulation waveform of tb_bit_flip_channel verifying error modes 00 (clean), 01 (single-bit), and 10 (double-bit)"
+                    aria-label="Zoom tb_bit_flip_channel waveform"
+                  >
+                    <img
+                      src="./assets/waveform_tb_bit_flip_channel.png"
+                      alt="Simulation waveform of tb_bit_flip_channel"
+                      loading="lazy"
+                    />
+                    <span class="zoom-pill mono">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      Click to enlarge
+                    </span>
+                  </button>
+                  <p class="figure-caption">
+                    Testbench waveform for <code>bit_flip_channel.v</code> confirming error modes <code>00</code>, <code>01</code>, and <code>10</code> with zero mismatches.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Education & Contact -->
+    <!-- Education & Direct Contact -->
     <section id="contact" class="section section-bordered">
       <div class="container contact-grid">
         <div class="card">
-          <div class="card-tag mono text-cyan">EDUCATION &amp; BACKGROUND</div>
-          <h3>Academic Profile &amp; Languages</h3>
-          <div class="edu-block">
+          <span class="card-kicker mono text-cyan">ACADEMIC BACKGROUND</span>
+          <h3>Education &amp; Languages</h3>
+
+          <div class="edu-panel">
             <div class="edu-row">
               <strong>FPT University</strong>
               <span class="mono text-cyan">2024 &ndash; Present</span>
             </div>
-            <p>Major: <strong>IC Design</strong> (Integrated Circuit Design)</p>
-            <p>Campus: Ho Chi Minh City, Vietnam</p>
+            <p class="edu-detail">Major: <strong>Integrated Circuit (IC) Design</strong></p>
+            <p class="edu-detail">Campus: Ho Chi Minh City, Vietnam</p>
           </div>
 
-          <div class="lang-block">
-            <h4>Languages</h4>
+          <div class="lang-section">
+            <h4 class="lang-heading mono">LANGUAGES</h4>
             <ul class="lang-list">
               <li><span>Vietnamese</span> <span class="mono text-muted">Native</span></li>
               <li><span>English</span> <span class="mono text-muted">Professional</span></li>
@@ -682,11 +714,11 @@
         </div>
 
         <div class="card">
-          <div class="card-tag mono text-emerald">DIRECT CONTACT</div>
-          <h3>Connect &amp; Download CV</h3>
+          <span class="card-kicker mono text-emerald">GET IN TOUCH</span>
+          <h3>Direct Contact &amp; Resume</h3>
           <p class="contact-desc">
-            Open to <strong>IC Design / RTL Verification Intern</strong>, <strong>FPGA Engineering Intern</strong>,
-            and <strong>Embedded Linux / C++ Software Intern</strong> opportunities.
+            Available for <strong>RTL Design Intern</strong>, <strong>FPGA / Digital Verification Intern</strong>,
+            and <strong>Embedded Systems Intern</strong> roles.
           </p>
 
           <div class="contact-items">
@@ -701,6 +733,10 @@
                 id="copy-email-btn"
                 data-email="weliuliu132@gmail.com"
               >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
                 Copy Email
               </button>
             </div>
@@ -710,7 +746,7 @@
                 <span class="contact-label mono">PHONE</span>
                 <a class="contact-value mono" href="tel:+84344482490">+84 344 482 490</a>
               </div>
-              <span class="mono text-muted">HCMC, Vietnam</span>
+              <span class="mono text-muted">Ho Chi Minh City</span>
             </div>
 
             <div class="contact-links-row">
@@ -722,14 +758,9 @@
               >
                 GitHub Profile
               </a>
-              <a
-                class="btn btn-secondary btn-sm"
-                href="https://github.com/weliuliu123-byte/LOS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LOS Repository
-              </a>
+              <button type="button" class="btn btn-secondary btn-sm" id="contact-preview-cv">
+                Preview CV Inline
+              </button>
               <a
                 class="btn btn-primary btn-sm"
                 href="./Ha_Gia_Bao_Resume.pdf"
@@ -746,10 +777,23 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p class="mono">Ha Gia Bao &bull; IC Design, FPGA RTL &amp; Embedded Linux Portfolio</p>
+      <p class="mono">Ha Gia Bao &bull; IC Design &amp; FPGA RTL Portfolio</p>
       <p class="text-muted">Hosted on GitHub Pages (<code>weliuliu123-byte.github.io</code>)</p>
     </div>
   </footer>
+
+  <!-- Lightbox Dialog for Schematics & Waveforms -->
+  <dialog id="lightbox-modal" class="lightbox-modal" aria-labelledby="lightbox-caption">
+    <div class="lightbox-bar">
+      <p id="lightbox-caption" class="mono"></p>
+      <button type="button" class="btn btn-secondary btn-sm" id="close-lightbox">
+        Close
+      </button>
+    </div>
+    <div class="lightbox-stage">
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+  </dialog>
 
   <!-- Inline Resume Preview Modal -->
   <dialog id="resume-modal" class="resume-modal" aria-labelledby="resume-modal-title">
