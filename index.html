@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ha Gia Bao | C++ Software Engineer &amp; IC Design Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio of Ha Gia Bao — Second-year IC Design undergraduate at FPT University specializing in Modern C++, multithreaded systems, memory-safe architectures, and EDA simulation analytics."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <a class="brand-monogram" href="#about" aria-label="Ha Gia Bao Home">
+          <span class="mono-accent">HGB</span>
+          <span class="mono-sep" aria-hidden="true">//</span>
+          <span>C++ &amp; IC DESIGN</span>
+        </a>
+        <span class="status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open for 2026/2027 Internships
+        </span>
+      </div>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#domains">Domains</a>
+        <a href="#projects">Projects</a>
+        <a href="#benchmarks">Benchmarks</a>
+        <a href="#terminal">Terminal</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary btn-sm" href="./Ha_Gia_Bao_Resume.pdf" download="Ha_Gia_Bao_Resume.pdf">
+          Download Resume (PDF)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="about" class="section hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow mono">SYSTEMS SOFTWARE &amp; SEMICONDUCTOR ENGINEERING</p>
+          <h1>High-Performance C++ Software Engineering &amp; IC Design / EDA Systems</h1>
+          <p class="hero-lead">
+            I am <strong>Ha Gia Bao</strong>, a second-year <strong>IC Design</strong> student at
+            <strong>FPT University</strong> (Ho Chi Minh City) with a strong foundation in
+            <strong>Modern C++</strong>, Object-Oriented Programming, STL containers,
+            multithreading, and rigorous memory management. I build deterministic,
+            high-throughput software tools that bridge semiconductor verification and
+            systems engineering.
+          </p>
+
+          <div class="hero-metrics" aria-label="Key engineering metrics">
+            <div class="metric-card">
+              <span class="metric-value mono text-cyan">7.05x</span>
+              <span class="metric-label">Multithreaded Speedup Target</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value mono text-emerald">0 B</span>
+              <span class="metric-label">Memory Leak RAII Discipline</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value mono">7.8 / 10</span>
+              <span class="metric-label">GPA &mdash; FPT University</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="./Ha_Gia_Bao_Resume.pdf" download="Ha_Gia_Bao_Resume.pdf">
+              Download CV PDF
+            </a>
+            <button type="button" class="btn btn-secondary" id="open-resume-modal">
+              Preview CV Inline
+            </button>
+            <a class="btn btn-ghost" href="#benchmarks">
+              Interactive Benchmarks
+            </a>
+          </div>
+        </div>
+
+        <aside class="identity-card" aria-label="Engineer identity and C++ profile">
+          <div class="identity-header">
+            <img
+              src="./assets/avatar.jpg"
+              alt="Portrait of Ha Gia Bao"
+              class="identity-avatar"
+              width="96"
+              height="96"
+            />
+            <div class="identity-meta">
+              <h2 class="identity-name">Ha Gia Bao</h2>
+              <p class="identity-role">C++ Software Engineer Intern</p>
+              <p class="identity-edu">FPT University &bull; B.Eng. IC Design</p>
+              <p class="identity-loc mono">Ho Chi Minh City, Vietnam</p>
+            </div>
+          </div>
+
+          <div class="code-window">
+            <div class="code-window-bar">
+              <span class="code-filename mono">engineer_profile.hpp</span>
+              <span class="code-lang mono">C++20</span>
+            </div>
+            <pre class="code-block"><code><span class="kw">struct</span> <span class="type">EngineerProfile</span> {
+  <span class="type">std::string_view</span> name       = <span class="str">"Ha Gia Bao"</span>;
+  <span class="type">std::string_view</span> university = <span class="str">"FPT University (2024 - Present)"</span>;
+  <span class="type">std::string_view</span> major      = <span class="str">"IC Design"</span>;
+  <span class="kw">double</span>           gpa        = <span class="num">7.8</span>; <span class="cmt">// / 10.0</span>
+
+  <span class="type">std::array</span>&lt;<span class="type">std::string_view</span>, <span class="num">4</span>&gt; focus = {
+    <span class="str">"Modern C++ (OOP, STL, Smart Pointers)"</span>,
+    <span class="str">"Multithreading &amp; OS Concurrency"</span>,
+    <span class="str">"Hardware Simulation Log Processing"</span>,
+    <span class="str">"Algorithms &amp; Cache-Aware Data Structures"</span>
+  };
+};</code></pre>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Dual-Track Engineering Domains -->
+    <section id="domains" class="section section-bordered">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow mono">CORE CAPABILITIES</p>
+          <h2>Dual-Track Engineering Domains</h2>
+          <p class="section-subtitle">
+            Combining systems-level C++ software architecture with semiconductor IC Design fundamentals.
+          </p>
+        </div>
+
+        <div class="domains-grid">
+          <article class="card domain-card">
+            <div class="card-tag mono text-cyan">01 // SYSTEMS SOFTWARE</div>
+            <h3>Modern C++ &amp; High-Performance Systems</h3>
+            <p>
+              Designing modular, memory-safe engines in Modern C/C++ with strict RAII ownership
+              and multi-core concurrency.
+            </p>
+            <ul class="tag-list" aria-label="Modern C++ skills">
+              <li>Modern C/C++ (C++17/20)</li>
+              <li>OOP &amp; STL Containers</li>
+              <li>Smart Pointers (unique_ptr / shared_ptr)</li>
+              <li>Multithreading &amp; OS Concepts</li>
+              <li>Memory Safety &amp; Leak Prevention</li>
+            </ul>
+          </article>
+
+          <article class="card domain-card">
+            <div class="card-tag mono text-emerald">02 // SEMICONDUCTOR &amp; EDA</div>
+            <h3>IC Design &amp; EDA Verification Tooling</h3>
+            <p>
+              Bridging Integrated Circuit Design coursework with fast C++ analytics tooling for
+              hardware simulation workflows.
+            </p>
+            <ul class="tag-list" aria-label="IC Design and EDA skills">
+              <li>IC Design Fundamentals</li>
+              <li>Hardware Simulation Log Parsing</li>
+              <li>High-Performance Data Processing</li>
+              <li>RTL-to-Software Telemetry</li>
+              <li>Embedded Systems Foundations</li>
+            </ul>
+          </article>
+
+          <article class="card domain-card">
+            <div class="card-tag mono text-cyan">03 // ALGORITHMIC RIGOR</div>
+            <h3>Algorithms &amp; Data Structures Optimization</h3>
+            <p>
+              Applying cache-friendly structures and asymptotic analysis to solve complex data
+              parsing and logical bottlenecks.
+            </p>
+            <ul class="tag-list" aria-label="Algorithms and Data Structures skills">
+              <li>Trees &amp; Prefix Indexing</li>
+              <li>Graphs &amp; Netlist Traversal</li>
+              <li>Open-Addressing Hashmaps</li>
+              <li>Sorting Optimization</li>
+              <li>Logical Problem Solving</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects & Interactive Benchmark Lab -->
+    <section id="projects" class="section section-bordered">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow mono">ENGINEERING WORK</p>
+          <h2>Featured Projects &amp; Architecture</h2>
+          <p class="section-subtitle">
+            Academic and systems engineering projects built with Modern C++, multithreading, and algorithmic optimization.
+          </p>
+        </div>
+
+        <div class="projects-stack">
+          <!-- Project 1 + Interactive Benchmark Lab -->
+          <article class="card project-card" id="benchmarks">
+            <div class="project-layout">
+              <div class="project-info">
+                <div class="project-meta-row">
+                  <span class="badge badge-cyan mono">2025 &ndash; PRESENT</span>
+                  <span class="project-org">FPT University</span>
+                </div>
+                <h3>High-Performance Data Processing Tool (Hardware Simulation Log Analyzer)</h3>
+                <p class="project-summary">
+                  Core parsing and analysis engine built to process large-scale hardware simulation
+                  logs efficiently without compromising memory safety during long-running verification tasks.
+                </p>
+                <ul class="bullet-list">
+                  <li>
+                    <strong>Core Parsing Architecture:</strong> Designed and built the core logic using
+                    Modern C++ and STL containers to tokenize and aggregate multi-million-line simulation outputs.
+                  </li>
+                  <li>
+                    <strong>Multithreaded Execution:</strong> Implemented chunk-based multithreading to
+                    process independent data blocks concurrently, reducing execution time and maximizing CPU utilization.
+                  </li>
+                  <li>
+                    <strong>Strict Memory Management:</strong> Enforced RAII and smart-pointer rules across
+                    all buffers and worker contexts, preventing memory leaks in sustained workloads.
+                  </li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    class="btn btn-secondary btn-sm"
+                    href="https://github.com/weliuliu123-byte/hpc-sim-log-analyzer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Repository on GitHub
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Thread-Scaling Benchmark Widget -->
+              <div class="benchmark-panel" aria-labelledby="bench-panel-title">
+                <div class="benchmark-header">
+                  <div>
+                    <h4 id="bench-panel-title">Interactive Thread-Scaling Benchmark</h4>
+                    <p class="benchmark-caption mono">Dataset: 1.0 GB Hardware Sim Log (10M+ lines) &bull; Reference Profile</p>
+                  </div>
+                  <span class="leak-badge mono" id="bench-leak-status">0 B Leaked</span>
+                </div>
+
+                <div class="bench-controls" role="group" aria-label="Select parser configuration">
+                  <button type="button" class="bench-tab" data-mode="single_copy" aria-pressed="false">
+                    1 Thread (std::string copy)
+                  </button>
+                  <button type="button" class="bench-tab" data-mode="single_view" aria-pressed="false">
+                    1 Thread (std::string_view)
+                  </button>
+                  <button type="button" class="bench-tab" data-mode="threads_4" aria-pressed="false">
+                    4 Threads (Chunk Pool)
+                  </button>
+                  <button type="button" class="bench-tab is-active" data-mode="threads_8" aria-pressed="true">
+                    8 Threads (Optimized C++17)
+                  </button>
+                </div>
+
+                <div class="bench-bars" aria-live="polite">
+                  <div class="bench-row">
+                    <div class="bench-row-head">
+                      <span>Execution Time <small>(lower is better)</small></span>
+                      <strong class="mono" id="val-time">2.10 s</strong>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-cyan" id="bar-time" style="width: 14%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="bench-row">
+                    <div class="bench-row-head">
+                      <span>Throughput <small>(higher is better)</small></span>
+                      <strong class="mono" id="val-throughput">476.2 MB/s</strong>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-emerald" id="bar-throughput" style="width: 100%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="bench-row">
+                    <div class="bench-row-head">
+                      <span>Multithreading Speedup</span>
+                      <strong class="mono" id="val-speedup">7.05x</strong>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-cyan" id="bar-speedup" style="width: 100%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="bench-row">
+                    <div class="bench-row-head">
+                      <span>Peak RSS Memory <small>(lower is better)</small></span>
+                      <strong class="mono" id="val-memory">310 MB</strong>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-emerald" id="bar-memory" style="width: 22%;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="benchmark-note" id="bench-note">
+                  Zero-copy tokenization + thread-local aggregation eliminates allocator lock contention across 8 worker threads.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 + DSA Latency Comparison -->
+          <article class="card project-card">
+            <div class="project-layout">
+              <div class="project-info">
+                <div class="project-meta-row">
+                  <span class="badge badge-emerald mono">2024 &ndash; 2025</span>
+                  <span class="project-org">Academic Coursework</span>
+                </div>
+                <h3>Algorithms &amp; Data Structures Optimization</h3>
+                <p class="project-summary">
+                  Systematic implementation and optimization of foundational data structures and
+                  algorithms in clean, modular C++ for large-scale data parsing challenges.
+                </p>
+                <ul class="bullet-list">
+                  <li>
+                    <strong>Applied Data Structures:</strong> Engineered Trees, Graphs, Hashmaps, and
+                    optimized Sorting routines to minimize traversal latency and memory overhead.
+                  </li>
+                  <li>
+                    <strong>High-Performance Problem Solving:</strong> Achieved strong results across
+                    logical optimization assignments by writing clean, cache-conscious C++ modules.
+                  </li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    class="btn btn-secondary btn-sm"
+                    href="https://github.com/weliuliu123-byte/cpp-dsa-optimization-lab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Repository on GitHub
+                  </a>
+                </div>
+              </div>
+
+              <div class="benchmark-panel">
+                <div class="benchmark-header">
+                  <div>
+                    <h4>DSA Latency Comparison (1M Operations)</h4>
+                    <p class="benchmark-caption mono">Baseline Naive vs. Cache-Aware C++ Reference Profile</p>
+                  </div>
+                </div>
+
+                <div class="dsa-list">
+                  <div class="dsa-item">
+                    <div class="dsa-head">
+                      <span class="dsa-title">Open-Addressing Flat Hashmap</span>
+                      <span class="mono text-emerald">18.4 ms (2.40x faster)</span>
+                    </div>
+                    <div class="dsa-sub mono">vs. Chained Hashmap (44.2 ms) &bull; O(1) avg lookup</div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-emerald" style="width: 42%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="dsa-item">
+                    <div class="dsa-head">
+                      <span class="dsa-title">Compressed Prefix Trie Index</span>
+                      <span class="mono text-emerald">9.8 ms (19.9x faster)</span>
+                    </div>
+                    <div class="dsa-sub mono">vs. Linear String Scan (195.0 ms) &bull; O(k) prefix query</div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-cyan" style="width: 18%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="dsa-item">
+                    <div class="dsa-head">
+                      <span class="dsa-title">CSR / Flat Adjacency Graph Traversal</span>
+                      <span class="mono text-emerald">11.2 ms (2.39x faster)</span>
+                    </div>
+                    <div class="dsa-sub mono">vs. Pointer-Heavy Graph (26.8 ms) &bull; 100K-node DAG</div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-emerald" style="width: 36%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="dsa-item">
+                    <div class="dsa-head">
+                      <span class="dsa-title">Hybrid IntroSort / Radix Sort</span>
+                      <span class="mono text-emerald">68.5 ms (1.64x faster)</span>
+                    </div>
+                    <div class="dsa-sub mono">vs. Naive Comparison Sort (112.0 ms) &bull; 1M structured records</div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-cyan" style="width: 61%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Embedded Linux Systems (LOS201) -->
+          <article class="card project-card">
+            <div class="project-layout">
+              <div class="project-info">
+                <div class="project-meta-row">
+                  <span class="badge badge-cyan mono">LOS201 // EMBEDDED LINUX</span>
+                  <span class="project-org">FPT University</span>
+                </div>
+                <h3>Embedded Linux Systems (LOS201) &mdash; ARM Cortex-A9 Kernel Drivers &amp; Real-Time POSIX Daemon</h3>
+                <p class="project-summary">
+                  End-to-end embedded Linux engineering project covering custom kernel bring-up,
+                  character device drivers, flash storage persistence, and multi-threaded real-time
+                  userspace monitoring on emulated ARMv7-A Cortex-A9 hardware.
+                </p>
+                <ul class="bullet-list">
+                  <li>
+                    <strong>Kernel &amp; Platform Bring-Up:</strong> Cross-compiled Linux Kernel 6.1.90 LTS,
+                    BusyBox 1.35.0 initramfs, and U-Boot workflows targeting QEMU ARM Versatile Express (<code>vexpress-a9</code>).
+                  </li>
+                  <li>
+                    <strong>Device Drivers &amp; IPC:</strong> Built 20/20 character driver extensions
+                    (<code>sysfs</code>, <code>procfs</code>, <code>atomic_t</code>, mutex synchronization),
+                    IOCTL control planes (<code>/dev/asgn1</code>), misc devices, and 32MB MTD/JFFS2 flash persistence.
+                  </li>
+                  <li>
+                    <strong>Real-Time Daemon &amp; Verification:</strong> Implemented a 4-thread POSIX sensor
+                    monitoring daemon (<code>sms_app</code>) and verified stability with GDB, Valgrind,
+                    <code>perf</code>, and <code>cyclictest</code>.
+                  </li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    class="btn btn-secondary btn-sm"
+                    href="https://github.com/weliuliu123-byte/LOS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View LOS Repository on GitHub
+                  </a>
+                </div>
+              </div>
+
+              <div class="benchmark-panel">
+                <div class="benchmark-header">
+                  <div>
+                    <h4>Target Architecture &amp; Verification Matrix</h4>
+                    <p class="benchmark-caption mono">ARMv7-A Cortex-A9 (QEMU vexpress-a9) &bull; Linux 6.1.90 LTS</p>
+                  </div>
+                  <span class="leak-badge mono">20/20 PASS</span>
+                </div>
+
+                <div class="dsa-list">
+                  <div class="dsa-item">
+                    <div class="dsa-head">
+                      <span class="dsa-title">LAB-01: Kernel, BusyBox &amp; U-Boot Boot</span>
+                      <span class="mono text-emerald">PASS</span>
+                    </div>
+                    <div class="dsa-sub mono">arm-linux-gnueabihf-gcc 13.3.0 &bull; vexpress-v2p-ca9.dtb</div>
+                  </div>
+
+                  <div class="dsa-item">
+                    <div class="dsa-head">
+                      <span class="dsa-title">LAB-02 &amp; Extensions: Character Drivers</span>
+                      <span class="mono text-emerald">20 / 20 PASS</span>
+                    </div>
+                    <div class="dsa-sub mono">/dev/lab2, sysfs/procfs telemetry, atomic_t &amp; MTD/JFFS2 flash</div>
+                  </div>
+
+                  <div class="dsa-item">
+                    <div class="dsa-head">
+                      <span class="dsa-title">Assignments 01 &amp; 02: IOCTL &amp; RT Daemon</span>
+                      <span class="mono text-emerald">PASS</span>
+                    </div>
+                    <div class="dsa-sub mono">/dev/asgn1, /dev/counter, /dev/sms_sensor &amp; 4-thread sms_app</div>
+                  </div>
+
+                  <div class="dsa-item">
+                    <div class="dsa-head">
+                      <span class="dsa-title">LAB-03: Diagnostics &amp; Latency Profiling</span>
+                      <span class="mono text-emerald">PASS</span>
+                    </div>
+                    <div class="dsa-sub mono">GDB remote triage, Valgrind leak checks, perf &amp; cyclictest</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Engineering Terminal -->
+    <section id="terminal" class="section section-bordered">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow mono">INTERACTIVE SHELL</p>
+          <h2>Engineering CLI Explorer</h2>
+          <p class="section-subtitle">
+            Click a quick command or type directly below to inspect profile specs, skills, and benchmark summaries.
+          </p>
+        </div>
+
+        <div class="terminal-shell">
+          <div class="terminal-topbar">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-amber"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title mono">bao@fpt-ic-lab: ~/portfolio</span>
+            <button type="button" class="btn-clear mono" id="terminal-clear">clear</button>
+          </div>
+
+          <div class="terminal-chips" role="group" aria-label="Quick terminal commands">
+            <button type="button" class="chip mono" data-cmd="help">help</button>
+            <button type="button" class="chip mono" data-cmd="whoami">whoami</button>
+            <button type="button" class="chip mono" data-cmd="skills">skills</button>
+            <button type="button" class="chip mono" data-cmd="projects">projects</button>
+            <button type="button" class="chip mono" data-cmd="benchmark --threads 8">benchmark --threads 8</button>
+            <button type="button" class="chip mono" data-cmd="contact">contact</button>
+          </div>
+
+          <div class="terminal-output mono" id="terminal-output" aria-live="polite"></div>
+
+          <form class="terminal-input-row" id="terminal-form">
+            <label for="terminal-input" class="terminal-prompt mono">bao@fpt-ic-lab:~$</label>
+            <input
+              id="terminal-input"
+              class="terminal-input mono"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Type a command (e.g. help, whoami, benchmark --threads 8)..."
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Contact -->
+    <section id="contact" class="section section-bordered">
+      <div class="container contact-grid">
+        <div class="card">
+          <div class="card-tag mono text-cyan">ACADEMIC BACKGROUND</div>
+          <h3>Education &amp; Languages</h3>
+          <div class="edu-block">
+            <div class="edu-row">
+              <strong>FPT University</strong>
+              <span class="mono text-cyan">2024 &ndash; Present</span>
+            </div>
+            <p>Major: <strong>IC Design</strong> (Integrated Circuit Design)</p>
+            <p>Cumulative GPA: <strong class="mono">7.8 / 10</strong></p>
+          </div>
+
+          <div class="lang-block">
+            <h4>Languages</h4>
+            <ul class="lang-list">
+              <li><span>Vietnamese</span> <span class="mono text-muted">Native</span></li>
+              <li><span>English</span> <span class="mono text-muted">Professional</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag mono text-emerald">GET IN TOUCH</div>
+          <h3>Contact &amp; Direct Links</h3>
+          <p class="contact-desc">
+            Available for <strong>C++ Software Engineer Intern</strong> and
+            <strong>IC Design / EDA Tooling Intern</strong> roles in Ho Chi Minh City or remote teams.
+          </p>
+
+          <div class="contact-items">
+            <div class="contact-row">
+              <div>
+                <span class="contact-label mono">EMAIL</span>
+                <a class="contact-value" href="mailto:weliuliu132@gmail.com">weliuliu132@gmail.com</a>
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm"
+                id="copy-email-btn"
+                data-email="weliuliu132@gmail.com"
+              >
+                Copy Email
+              </button>
+            </div>
+
+            <div class="contact-row">
+              <div>
+                <span class="contact-label mono">PHONE</span>
+                <a class="contact-value mono" href="tel:+84344482490">+84 344 482 490</a>
+              </div>
+              <span class="mono text-muted">HCMC, Vietnam</span>
+            </div>
+
+            <div class="contact-links-row">
+              <a
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/weliuliu123-byte"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Profile
+              </a>
+              <a
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/weliuliu123-byte/LOS"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Embedded Linux (LOS)
+              </a>
+              <a
+                class="btn btn-primary btn-sm"
+                href="./Ha_Gia_Bao_Resume.pdf"
+                download="Ha_Gia_Bao_Resume.pdf"
+              >
+                Download Resume PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="mono">Ha Gia Bao &bull; C++ Systems &amp; IC Design Portfolio</p>
+      <p class="text-muted">Hosted on GitHub Pages (<code>weliuliu123-byte.github.io</code>)</p>
+    </div>
+  </footer>
+
+  <!-- Inline Resume Preview Modal -->
+  <dialog id="resume-modal" class="resume-modal" aria-labelledby="resume-modal-title">
+    <div class="modal-header">
+      <h2 id="resume-modal-title" class="mono">Ha_Gia_Bao_Resume.pdf</h2>
+      <div class="modal-actions">
+        <a class="btn btn-primary btn-sm" href="./Ha_Gia_Bao_Resume.pdf" download="Ha_Gia_Bao_Resume.pdf">
+          Download PDF
+        </a>
+        <button type="button" class="btn btn-secondary btn-sm" id="close-resume-modal">
+          Close
+        </button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <iframe
+        src="./Ha_Gia_Bao_Resume.pdf"
+        title="Ha Gia Bao Resume PDF Preview"
+        class="resume-frame"
+      ></iframe>
+    </div>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
