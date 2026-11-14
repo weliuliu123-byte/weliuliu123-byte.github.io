@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ha Gia Bao | C++ Software Engineer &amp; IC Design Portfolio</title>
+  <title>Ha Gia Bao | IC Design, FPGA RTL &amp; Embedded Linux Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Ha Gia Bao — Second-year IC Design undergraduate at FPT University specializing in Modern C++, multithreaded systems, memory-safe architectures, and EDA simulation analytics."
+    content="Engineering portfolio of Ha Gia Bao — IC Design student at FPT University focused on FPGA RTL design, Embedded Linux kernel drivers on ARM Cortex-A9, and hardware-software co-verification."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="./styles.css" />
@@ -25,11 +25,11 @@
         <a class="brand-monogram" href="#about" aria-label="Ha Gia Bao Home">
           <span class="mono-accent">HGB</span>
           <span class="mono-sep" aria-hidden="true">//</span>
-          <span>C++ &amp; IC DESIGN</span>
+          <span>RTL &amp; EMBEDDED SYSTEMS</span>
         </a>
         <span class="status-pill">
           <span class="status-dot" aria-hidden="true"></span>
-          Open for 2026/2027 Internships
+          Open for Internships
         </span>
       </div>
 
@@ -47,465 +47,558 @@
       </button>
 
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#domains">Domains</a>
-        <a href="#projects">Projects</a>
-        <a href="#benchmarks">Benchmarks</a>
-        <a href="#terminal">Terminal</a>
+        <a href="#about">Overview</a>
+        <a href="#domains">Capabilities</a>
+        <a href="#projects">Semester Projects</a>
+        <a href="#terminal">CLI</a>
         <a href="#contact">Contact</a>
         <a class="btn btn-primary btn-sm" href="./Ha_Gia_Bao_Resume.pdf" download="Ha_Gia_Bao_Resume.pdf">
-          Download Resume (PDF)
+          Resume PDF
         </a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- Hero Section -->
+    <!-- Hero Bento Section -->
     <section id="about" class="section hero-section">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="eyebrow mono">SYSTEMS SOFTWARE &amp; SEMICONDUCTOR ENGINEERING</p>
-          <h1>High-Performance C++ Software Engineering &amp; IC Design / EDA Systems</h1>
+          <div class="eyebrow-row">
+            <span class="eyebrow mono">IC DESIGN &bull; FPGA RTL &bull; EMBEDDED LINUX</span>
+          </div>
+          <h1>Hardware RTL, FPGA Accelerators &amp; Embedded Linux Systems</h1>
           <p class="hero-lead">
-            I am <strong>Ha Gia Bao</strong>, a second-year <strong>IC Design</strong> student at
-            <strong>FPT University</strong> (Ho Chi Minh City) with a strong foundation in
-            <strong>Modern C++</strong>, Object-Oriented Programming, STL containers,
-            multithreading, and rigorous memory management. I build deterministic,
-            high-throughput software tools that bridge semiconductor verification and
-            systems engineering.
+            I am <strong>Ha Gia Bao</strong>, an <strong>IC Design</strong> undergraduate at
+            <strong>FPT University</strong> (Ho Chi Minh City). My engineering work spans
+            synthesizable <strong>Verilog-2001 RTL pipelines</strong> on AMD/Xilinx FPGAs,
+            <strong>Linux 6.1.90 LTS kernel drivers</strong> and multi-threaded POSIX daemons on
+            ARMv7-A Cortex-A9, and bit-exact <strong>Python-to-RTL verification</strong>.
           </p>
 
-          <div class="hero-metrics" aria-label="Key engineering metrics">
+          <div class="hero-metrics" aria-label="Verified engineering highlights">
             <div class="metric-card">
-              <span class="metric-value mono text-cyan">7.05x</span>
-              <span class="metric-label">Multithreaded Speedup Target</span>
+              <span class="metric-value mono text-emerald">20 / 20</span>
+              <span class="metric-label">Kernel Driver Labs PASS</span>
             </div>
             <div class="metric-card">
-              <span class="metric-value mono text-emerald">0 B</span>
-              <span class="metric-label">Memory Leak RAII Discipline</span>
+              <span class="metric-value mono text-cyan">154,373</span>
+              <span class="metric-label">SECDED+BPSK Checks (0 Err)</span>
             </div>
             <div class="metric-card">
-              <span class="metric-value mono">7.8 / 10</span>
-              <span class="metric-label">GPA &mdash; FPT University</span>
+              <span class="metric-value mono text-cyan">516,133</span>
+              <span class="metric-label">KR260 Datapath Checks (0 Err)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value mono text-emerald">100 MHz</span>
+              <span class="metric-label">KR260 Timing Closure Met</span>
             </div>
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="./Ha_Gia_Bao_Resume.pdf" download="Ha_Gia_Bao_Resume.pdf">
-              Download CV PDF
+            <a class="btn btn-primary" href="#projects">
+              Explore Semester Projects
             </a>
             <button type="button" class="btn btn-secondary" id="open-resume-modal">
               Preview CV Inline
             </button>
-            <a class="btn btn-ghost" href="#benchmarks">
-              Interactive Benchmarks
+            <a class="btn btn-ghost" href="./Ha_Gia_Bao_Resume.pdf" download="Ha_Gia_Bao_Resume.pdf">
+              Download Resume PDF
+            </a>
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/weliuliu123-byte"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Profile
             </a>
           </div>
         </div>
 
-        <aside class="identity-card" aria-label="Engineer identity and C++ profile">
-          <div class="identity-header">
-            <img
-              src="./assets/avatar.jpg"
-              alt="Portrait of Ha Gia Bao"
-              class="identity-avatar"
-              width="96"
-              height="96"
-            />
+        <aside class="identity-card" aria-label="Engineer profile card">
+          <div class="identity-top">
+            <div class="avatar-ring">
+              <img
+                src="./assets/avatar.jpg"
+                alt="Portrait of Ha Gia Bao"
+                class="identity-avatar"
+                width="96"
+                height="96"
+              />
+            </div>
             <div class="identity-meta">
+              <div class="identity-badge mono">ENGINEER PROFILE</div>
               <h2 class="identity-name">Ha Gia Bao</h2>
-              <p class="identity-role">C++ Software Engineer Intern</p>
-              <p class="identity-edu">FPT University &bull; B.Eng. IC Design</p>
-              <p class="identity-loc mono">Ho Chi Minh City, Vietnam</p>
+              <p class="identity-role">IC Design &amp; Embedded Systems Engineer</p>
+              <p class="identity-edu">FPT University &bull; Ho Chi Minh City</p>
             </div>
           </div>
 
-          <div class="code-window">
-            <div class="code-window-bar">
-              <span class="code-filename mono">engineer_profile.hpp</span>
-              <span class="code-lang mono">C++20</span>
-            </div>
-            <pre class="code-block"><code><span class="kw">struct</span> <span class="type">EngineerProfile</span> {
-  <span class="type">std::string_view</span> name       = <span class="str">"Ha Gia Bao"</span>;
-  <span class="type">std::string_view</span> university = <span class="str">"FPT University (2024 - Present)"</span>;
-  <span class="type">std::string_view</span> major      = <span class="str">"IC Design"</span>;
-  <span class="kw">double</span>           gpa        = <span class="num">7.8</span>; <span class="cmt">// / 10.0</span>
+          <div class="identity-divider"></div>
 
-  <span class="type">std::array</span>&lt;<span class="type">std::string_view</span>, <span class="num">4</span>&gt; focus = {
-    <span class="str">"Modern C++ (OOP, STL, Smart Pointers)"</span>,
-    <span class="str">"Multithreading &amp; OS Concurrency"</span>,
-    <span class="str">"Hardware Simulation Log Processing"</span>,
-    <span class="str">"Algorithms &amp; Cache-Aware Data Structures"</span>
-  };
-};</code></pre>
+          <div class="stack-section">
+            <span class="stack-heading mono">HARDWARE &amp; SOFTWARE STACK</span>
+            <ul class="stack-pills" aria-label="Core technical stack">
+              <li>Verilog-2001</li>
+              <li>C / Modern C++</li>
+              <li>Linux Kernel Modules</li>
+              <li>Vivado / XSim</li>
+              <li>QEMU ARMv7-A</li>
+              <li>Python Golden Models</li>
+            </ul>
+          </div>
+
+          <div class="identity-links">
+            <a
+              class="id-link-item"
+              href="https://github.com/weliuliu123-byte"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="mono text-muted">GitHub</span>
+              <span class="mono text-cyan">weliuliu123-byte</span>
+            </a>
+            <a
+              class="id-link-item"
+              href="https://github.com/weliuliu123-byte/LOS"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="mono text-muted">Featured Repo</span>
+              <span class="mono text-emerald">weliuliu123-byte/LOS</span>
+            </a>
+            <a class="id-link-item" href="mailto:weliuliu132@gmail.com">
+              <span class="mono text-muted">Email</span>
+              <span class="mono">weliuliu132@gmail.com</span>
+            </a>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- Dual-Track Engineering Domains -->
+    <!-- Core Engineering Capabilities -->
     <section id="domains" class="section section-bordered">
       <div class="container">
         <div class="section-header">
           <p class="eyebrow mono">CORE CAPABILITIES</p>
-          <h2>Dual-Track Engineering Domains</h2>
+          <h2>Three Engineering Pillars</h2>
           <p class="section-subtitle">
-            Combining systems-level C++ software architecture with semiconductor IC Design fundamentals.
+            Hands-on hardware RTL design, Linux kernel space programming, and deterministic co-verification built across real semester projects.
           </p>
         </div>
 
         <div class="domains-grid">
           <article class="card domain-card">
-            <div class="card-tag mono text-cyan">01 // SYSTEMS SOFTWARE</div>
-            <h3>Modern C++ &amp; High-Performance Systems</h3>
+            <div class="card-tag mono text-cyan">01 // SILICON &amp; FPGA</div>
+            <h3>RTL &amp; FPGA Accelerator Design</h3>
             <p>
-              Designing modular, memory-safe engines in Modern C/C++ with strict RAII ownership
-              and multi-core concurrency.
+              Designing synthesizable Verilog-2001 streaming datapaths, shift-register 3&times;3
+              window generators, LFSR error-injection channels, and closing static timing on AMD/Xilinx targets.
             </p>
-            <ul class="tag-list" aria-label="Modern C++ skills">
-              <li>Modern C/C++ (C++17/20)</li>
-              <li>OOP &amp; STL Containers</li>
-              <li>Smart Pointers (unique_ptr / shared_ptr)</li>
-              <li>Multithreading &amp; OS Concepts</li>
-              <li>Memory Safety &amp; Leak Prevention</li>
+            <ul class="tag-list" aria-label="RTL and FPGA skills">
+              <li>Verilog-2001</li>
+              <li>Streaming Datapaths</li>
+              <li>3&times;3 Window &amp; Line Buffers</li>
+              <li>Vivado Synthesis &amp; STA</li>
+              <li>AMD Kria KR260</li>
             </ul>
           </article>
 
           <article class="card domain-card">
-            <div class="card-tag mono text-emerald">02 // SEMICONDUCTOR &amp; EDA</div>
-            <h3>IC Design &amp; EDA Verification Tooling</h3>
+            <div class="card-tag mono text-emerald">02 // KERNEL &amp; EMBEDDED</div>
+            <h3>Embedded Linux &amp; Kernel Drivers</h3>
             <p>
-              Bridging Integrated Circuit Design coursework with fast C++ analytics tooling for
-              hardware simulation workflows.
+              Cross-compiling Linux 6.1.90 LTS kernels and BusyBox initramfs for ARM Cortex-A9,
+              writing character drivers with mutex/atomic synchronization, and building POSIX real-time daemons.
             </p>
-            <ul class="tag-list" aria-label="IC Design and EDA skills">
-              <li>IC Design Fundamentals</li>
-              <li>Hardware Simulation Log Parsing</li>
-              <li>High-Performance Data Processing</li>
-              <li>RTL-to-Software Telemetry</li>
-              <li>Embedded Systems Foundations</li>
+            <ul class="tag-list" aria-label="Embedded Linux skills">
+              <li>Linux 6.1.90 LTS</li>
+              <li>Character Drivers &amp; IOCTL</li>
+              <li>sysfs / procfs / atomic_t</li>
+              <li>MTD &amp; JFFS2 Flash</li>
+              <li>POSIX Multi-threading</li>
             </ul>
           </article>
 
           <article class="card domain-card">
-            <div class="card-tag mono text-cyan">03 // ALGORITHMIC RIGOR</div>
-            <h3>Algorithms &amp; Data Structures Optimization</h3>
+            <div class="card-tag mono text-cyan">03 // VERIFICATION &amp; BRING-UP</div>
+            <h3>Hardware-Software Co-Verification</h3>
             <p>
-              Applying cache-friendly structures and asymptotic analysis to solve complex data
-              parsing and logical bottlenecks.
+              Validating RTL designs against Python golden models across hundreds of thousands of
+              self-checking transactions, plus ARM Linux MMIO bring-up and runtime profiling.
             </p>
-            <ul class="tag-list" aria-label="Algorithms and Data Structures skills">
-              <li>Trees &amp; Prefix Indexing</li>
-              <li>Graphs &amp; Netlist Traversal</li>
-              <li>Open-Addressing Hashmaps</li>
-              <li>Sorting Optimization</li>
-              <li>Logical Problem Solving</li>
+            <ul class="tag-list" aria-label="Verification skills">
+              <li>Python Golden Models</li>
+              <li>Self-Checking Testbenches</li>
+              <li>/dev/mem &amp; mmap() MMIO</li>
+              <li>GDB &amp; Valgrind</li>
+              <li>perf &amp; cyclictest</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects & Interactive Benchmark Lab -->
+    <!-- Semester Projects Section -->
     <section id="projects" class="section section-bordered">
       <div class="container">
-        <div class="section-header">
-          <p class="eyebrow mono">ENGINEERING WORK</p>
-          <h2>Featured Projects &amp; Architecture</h2>
-          <p class="section-subtitle">
-            Academic and systems engineering projects built with Modern C++, multithreading, and algorithmic optimization.
-          </p>
+        <div class="projects-header-bar">
+          <div class="section-header projects-heading">
+            <p class="eyebrow mono">VERIFIED SEMESTER WORK</p>
+            <h2>Projects Completed This Semester</h2>
+            <p class="section-subtitle">
+              Real engineering projects built and verified across Embedded Linux (LOS201), FPGA Communications (COS201), and FPGA Image DSP (DGT302).
+            </p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filter projects by engineering domain">
+            <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">
+              All Projects <span class="count-pill mono">3</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="fpga" aria-pressed="false">
+              FPGA &amp; RTL Design <span class="count-pill mono">2</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="linux" aria-pressed="false">
+              Embedded Linux &amp; Drivers <span class="count-pill mono">1</span>
+            </button>
+          </div>
         </div>
 
         <div class="projects-stack">
-          <!-- Project 1 + Interactive Benchmark Lab -->
-          <article class="card project-card" id="benchmarks">
+          <!-- Project 1: LOS201 -->
+          <article class="card project-card" data-category="linux">
             <div class="project-layout">
               <div class="project-info">
                 <div class="project-meta-row">
-                  <span class="badge badge-cyan mono">2025 &ndash; PRESENT</span>
-                  <span class="project-org">FPT University</span>
+                  <span class="badge badge-emerald mono">LOS201 // EMBEDDED LINUX</span>
+                  <span class="role-badge mono">Sole Author</span>
                 </div>
-                <h3>High-Performance Data Processing Tool (Hardware Simulation Log Analyzer)</h3>
+                <h3>Embedded Linux Systems on ARMv7-A Cortex-A9</h3>
                 <p class="project-summary">
-                  Core parsing and analysis engine built to process large-scale hardware simulation
-                  logs efficiently without compromising memory safety during long-running verification tasks.
+                  End-to-end embedded Linux engineering covering Linux 6.1.90 LTS kernel bring-up,
+                  20+ character device driver modules, persistent JFFS2 flash storage, and a
+                  4-thread real-time POSIX monitoring daemon on QEMU <code>vexpress-a9</code>.
                 </p>
                 <ul class="bullet-list">
                   <li>
-                    <strong>Core Parsing Architecture:</strong> Designed and built the core logic using
-                    Modern C++ and STL containers to tokenize and aggregate multi-million-line simulation outputs.
+                    <strong>Kernel &amp; Platform Bring-Up:</strong> Cross-compiled Linux <code>6.1.90</code> LTS,
+                    BusyBox <code>1.35.0</code> static initramfs, and U-Boot boot flows using
+                    <code>arm-linux-gnueabihf-gcc</code> (GCC 13.3.0).
                   </li>
                   <li>
-                    <strong>Multithreaded Execution:</strong> Implemented chunk-based multithreading to
-                    process independent data blocks concurrently, reducing execution time and maximizing CPU utilization.
+                    <strong>Drivers, IOCTL &amp; Flash:</strong> Built <code>/dev/lab2</code> (Major 240, mutex buffer),
+                    <strong>20/20</strong> driver extension labs (<code>sysfs</code>, <code>procfs</code>,
+                    <code>atomic_t</code>, unlocked IOCTL), <code>/dev/asgn1</code>, lock-free <code>/dev/counter</code>,
+                    and 32MB MTD/<code>nandsim</code> JFFS2 storage.
                   </li>
                   <li>
-                    <strong>Strict Memory Management:</strong> Enforced RAII and smart-pointer rules across
-                    all buffers and worker contexts, preventing memory leaks in sustained workloads.
+                    <strong>Real-Time Userspace &amp; Diagnostics:</strong> Implemented the 4-thread POSIX sensor
+                    daemon (<code>sms_app</code> + <code>/dev/sms_sensor</code>) and profiled with GDB,
+                    Valgrind (<code>0 leaks</code>), <code>perf</code>, and <code>cyclictest</code>.
                   </li>
                 </ul>
                 <div class="project-links">
                   <a
-                    class="btn btn-secondary btn-sm"
-                    href="https://github.com/weliuliu123-byte/hpc-sim-log-analyzer"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Repository on GitHub
-                  </a>
-                </div>
-              </div>
-
-              <!-- Interactive Thread-Scaling Benchmark Widget -->
-              <div class="benchmark-panel" aria-labelledby="bench-panel-title">
-                <div class="benchmark-header">
-                  <div>
-                    <h4 id="bench-panel-title">Interactive Thread-Scaling Benchmark</h4>
-                    <p class="benchmark-caption mono">Dataset: 1.0 GB Hardware Sim Log (10M+ lines) &bull; Reference Profile</p>
-                  </div>
-                  <span class="leak-badge mono" id="bench-leak-status">0 B Leaked</span>
-                </div>
-
-                <div class="bench-controls" role="group" aria-label="Select parser configuration">
-                  <button type="button" class="bench-tab" data-mode="single_copy" aria-pressed="false">
-                    1 Thread (std::string copy)
-                  </button>
-                  <button type="button" class="bench-tab" data-mode="single_view" aria-pressed="false">
-                    1 Thread (std::string_view)
-                  </button>
-                  <button type="button" class="bench-tab" data-mode="threads_4" aria-pressed="false">
-                    4 Threads (Chunk Pool)
-                  </button>
-                  <button type="button" class="bench-tab is-active" data-mode="threads_8" aria-pressed="true">
-                    8 Threads (Optimized C++17)
-                  </button>
-                </div>
-
-                <div class="bench-bars" aria-live="polite">
-                  <div class="bench-row">
-                    <div class="bench-row-head">
-                      <span>Execution Time <small>(lower is better)</small></span>
-                      <strong class="mono" id="val-time">2.10 s</strong>
-                    </div>
-                    <div class="progress-track">
-                      <div class="progress-fill fill-cyan" id="bar-time" style="width: 14%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="bench-row">
-                    <div class="bench-row-head">
-                      <span>Throughput <small>(higher is better)</small></span>
-                      <strong class="mono" id="val-throughput">476.2 MB/s</strong>
-                    </div>
-                    <div class="progress-track">
-                      <div class="progress-fill fill-emerald" id="bar-throughput" style="width: 100%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="bench-row">
-                    <div class="bench-row-head">
-                      <span>Multithreading Speedup</span>
-                      <strong class="mono" id="val-speedup">7.05x</strong>
-                    </div>
-                    <div class="progress-track">
-                      <div class="progress-fill fill-cyan" id="bar-speedup" style="width: 100%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="bench-row">
-                    <div class="bench-row-head">
-                      <span>Peak RSS Memory <small>(lower is better)</small></span>
-                      <strong class="mono" id="val-memory">310 MB</strong>
-                    </div>
-                    <div class="progress-track">
-                      <div class="progress-fill fill-emerald" id="bar-memory" style="width: 22%;"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <p class="benchmark-note" id="bench-note">
-                  Zero-copy tokenization + thread-local aggregation eliminates allocator lock contention across 8 worker threads.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2 + DSA Latency Comparison -->
-          <article class="card project-card">
-            <div class="project-layout">
-              <div class="project-info">
-                <div class="project-meta-row">
-                  <span class="badge badge-emerald mono">2024 &ndash; 2025</span>
-                  <span class="project-org">Academic Coursework</span>
-                </div>
-                <h3>Algorithms &amp; Data Structures Optimization</h3>
-                <p class="project-summary">
-                  Systematic implementation and optimization of foundational data structures and
-                  algorithms in clean, modular C++ for large-scale data parsing challenges.
-                </p>
-                <ul class="bullet-list">
-                  <li>
-                    <strong>Applied Data Structures:</strong> Engineered Trees, Graphs, Hashmaps, and
-                    optimized Sorting routines to minimize traversal latency and memory overhead.
-                  </li>
-                  <li>
-                    <strong>High-Performance Problem Solving:</strong> Achieved strong results across
-                    logical optimization assignments by writing clean, cache-conscious C++ modules.
-                  </li>
-                </ul>
-                <div class="project-links">
-                  <a
-                    class="btn btn-secondary btn-sm"
-                    href="https://github.com/weliuliu123-byte/cpp-dsa-optimization-lab"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Repository on GitHub
-                  </a>
-                </div>
-              </div>
-
-              <div class="benchmark-panel">
-                <div class="benchmark-header">
-                  <div>
-                    <h4>DSA Latency Comparison (1M Operations)</h4>
-                    <p class="benchmark-caption mono">Baseline Naive vs. Cache-Aware C++ Reference Profile</p>
-                  </div>
-                </div>
-
-                <div class="dsa-list">
-                  <div class="dsa-item">
-                    <div class="dsa-head">
-                      <span class="dsa-title">Open-Addressing Flat Hashmap</span>
-                      <span class="mono text-emerald">18.4 ms (2.40x faster)</span>
-                    </div>
-                    <div class="dsa-sub mono">vs. Chained Hashmap (44.2 ms) &bull; O(1) avg lookup</div>
-                    <div class="progress-track">
-                      <div class="progress-fill fill-emerald" style="width: 42%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="dsa-item">
-                    <div class="dsa-head">
-                      <span class="dsa-title">Compressed Prefix Trie Index</span>
-                      <span class="mono text-emerald">9.8 ms (19.9x faster)</span>
-                    </div>
-                    <div class="dsa-sub mono">vs. Linear String Scan (195.0 ms) &bull; O(k) prefix query</div>
-                    <div class="progress-track">
-                      <div class="progress-fill fill-cyan" style="width: 18%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="dsa-item">
-                    <div class="dsa-head">
-                      <span class="dsa-title">CSR / Flat Adjacency Graph Traversal</span>
-                      <span class="mono text-emerald">11.2 ms (2.39x faster)</span>
-                    </div>
-                    <div class="dsa-sub mono">vs. Pointer-Heavy Graph (26.8 ms) &bull; 100K-node DAG</div>
-                    <div class="progress-track">
-                      <div class="progress-fill fill-emerald" style="width: 36%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="dsa-item">
-                    <div class="dsa-head">
-                      <span class="dsa-title">Hybrid IntroSort / Radix Sort</span>
-                      <span class="mono text-emerald">68.5 ms (1.64x faster)</span>
-                    </div>
-                    <div class="dsa-sub mono">vs. Naive Comparison Sort (112.0 ms) &bull; 1M structured records</div>
-                    <div class="progress-track">
-                      <div class="progress-fill fill-cyan" style="width: 61%;"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3: Embedded Linux Systems (LOS201) -->
-          <article class="card project-card">
-            <div class="project-layout">
-              <div class="project-info">
-                <div class="project-meta-row">
-                  <span class="badge badge-cyan mono">LOS201 // EMBEDDED LINUX</span>
-                  <span class="project-org">FPT University</span>
-                </div>
-                <h3>Embedded Linux Systems (LOS201) &mdash; ARM Cortex-A9 Kernel Drivers &amp; Real-Time POSIX Daemon</h3>
-                <p class="project-summary">
-                  End-to-end embedded Linux engineering project covering custom kernel bring-up,
-                  character device drivers, flash storage persistence, and multi-threaded real-time
-                  userspace monitoring on emulated ARMv7-A Cortex-A9 hardware.
-                </p>
-                <ul class="bullet-list">
-                  <li>
-                    <strong>Kernel &amp; Platform Bring-Up:</strong> Cross-compiled Linux Kernel 6.1.90 LTS,
-                    BusyBox 1.35.0 initramfs, and U-Boot workflows targeting QEMU ARM Versatile Express (<code>vexpress-a9</code>).
-                  </li>
-                  <li>
-                    <strong>Device Drivers &amp; IPC:</strong> Built 20/20 character driver extensions
-                    (<code>sysfs</code>, <code>procfs</code>, <code>atomic_t</code>, mutex synchronization),
-                    IOCTL control planes (<code>/dev/asgn1</code>), misc devices, and 32MB MTD/JFFS2 flash persistence.
-                  </li>
-                  <li>
-                    <strong>Real-Time Daemon &amp; Verification:</strong> Implemented a 4-thread POSIX sensor
-                    monitoring daemon (<code>sms_app</code>) and verified stability with GDB, Valgrind,
-                    <code>perf</code>, and <code>cyclictest</code>.
-                  </li>
-                </ul>
-                <div class="project-links">
-                  <a
-                    class="btn btn-secondary btn-sm"
+                    class="btn btn-primary btn-sm"
                     href="https://github.com/weliuliu123-byte/LOS"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View LOS Repository on GitHub
+                    View Repository (weliuliu123-byte/LOS)
                   </a>
                 </div>
               </div>
 
-              <div class="benchmark-panel">
-                <div class="benchmark-header">
-                  <div>
-                    <h4>Target Architecture &amp; Verification Matrix</h4>
-                    <p class="benchmark-caption mono">ARMv7-A Cortex-A9 (QEMU vexpress-a9) &bull; Linux 6.1.90 LTS</p>
-                  </div>
-                  <span class="leak-badge mono">20/20 PASS</span>
+              <!-- Interactive Technical Inspector -->
+              <div class="inspector-panel" data-inspector>
+                <div class="inspector-tabs" role="tablist" aria-label="LOS201 technical views">
+                  <button type="button" class="insp-tab is-active" role="tab" aria-selected="true" data-tab="pipeline">
+                    Architecture
+                  </button>
+                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="ownership">
+                    My Ownership
+                  </button>
+                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="metrics">
+                    Verification
+                  </button>
                 </div>
 
-                <div class="dsa-list">
-                  <div class="dsa-item">
-                    <div class="dsa-head">
-                      <span class="dsa-title">LAB-01: Kernel, BusyBox &amp; U-Boot Boot</span>
-                      <span class="mono text-emerald">PASS</span>
-                    </div>
-                    <div class="dsa-sub mono">arm-linux-gnueabihf-gcc 13.3.0 &bull; vexpress-v2p-ca9.dtb</div>
+                <div class="insp-pane is-active" data-pane="pipeline">
+                  <p class="insp-caption mono">USERSPACE &rarr; VFS/IOCTL &rarr; KERNEL DRIVERS &rarr; QEMU ARMv7-A</p>
+                  <div class="stage-flow">
+                    <span class="stage-chip">BusyBox Initramfs &amp; 4-Thread sms_app</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">VFS Syscalls (open/read/write/ioctl)</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip is-highlight">/dev/lab2, /dev/asgn1, /dev/counter</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip is-highlight">/dev/sms_sensor + sysfs/procfs</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">32MB MTD / nandsim JFFS2</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">QEMU vexpress-a9 (Linux 6.1.90)</span>
                   </div>
+                </div>
 
-                  <div class="dsa-item">
-                    <div class="dsa-head">
-                      <span class="dsa-title">LAB-02 &amp; Extensions: Character Drivers</span>
-                      <span class="mono text-emerald">20 / 20 PASS</span>
+                <div class="insp-pane" data-pane="ownership" hidden>
+                  <p class="insp-caption mono">SOLE AUTHORSHIP &amp; MODULES BUILT</p>
+                  <ul class="owner-list">
+                    <li><code>labs/lab01</code> &mdash; Kernel 6.1.90 LTS, U-Boot &amp; BusyBox rootfs build</li>
+                    <li><code>labs/lab02</code> &mdash; Base character driver <code>/dev/lab2</code> + JFFS2 flash</li>
+                    <li><code>assignments/driver-exercises</code> &mdash; All 20 character driver extension modules</li>
+                    <li><code>assignments/assignment01</code> &mdash; 4-command IOCTL driver &amp; lock-free misc counter</li>
+                    <li><code>assignments/assignment02</code> &mdash; <code>sms_sensor_driver.c</code> &amp; 4-thread POSIX daemon</li>
+                    <li><code>labs/lab03</code> &mdash; GDB remote triage, Valgrind, <code>perf</code> &amp; <code>cyclictest</code></li>
+                  </ul>
+                </div>
+
+                <div class="insp-pane" data-pane="metrics" hidden>
+                  <p class="insp-caption mono">VERIFIED LABS &amp; DIAGNOSTIC STATUS</p>
+                  <div class="mini-metrics-grid">
+                    <div class="mini-metric">
+                      <span class="mini-label mono">Driver Exercises</span>
+                      <span class="mini-val mono text-emerald">20 / 20 PASS</span>
                     </div>
-                    <div class="dsa-sub mono">/dev/lab2, sysfs/procfs telemetry, atomic_t &amp; MTD/JFFS2 flash</div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">Target Machine</span>
+                      <span class="mini-val mono">Cortex-A9 512MB</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">Kernel ABI</span>
+                      <span class="mini-val mono">Linux 6.1.90 SMP</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">Assignments 01 &amp; 02</span>
+                      <span class="mini-val mono text-emerald">PASS (RT Daemon)</span>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-                  <div class="dsa-item">
-                    <div class="dsa-head">
-                      <span class="dsa-title">Assignments 01 &amp; 02: IOCTL &amp; RT Daemon</span>
-                      <span class="mono text-emerald">PASS</span>
-                    </div>
-                    <div class="dsa-sub mono">/dev/asgn1, /dev/counter, /dev/sms_sensor &amp; 4-thread sms_app</div>
+          <!-- Project 2: COS201 -->
+          <article class="card project-card" data-category="fpga">
+            <div class="project-layout">
+              <div class="project-info">
+                <div class="project-meta-row">
+                  <span class="badge badge-cyan mono">COS201 // FPGA COMMUNICATIONS</span>
+                  <span class="role-badge mono">System Integration &amp; Channel RTL</span>
+                </div>
+                <h3>FPGA SECDED (8,4) + BPSK Communication Pipeline</h3>
+                <p class="project-summary">
+                  Deterministic FPGA communication system combining Extended Hamming SECDED (8,4)
+                  error correction, BPSK modulation/demodulation, LFSR-based channel bit-flip &amp;
+                  noise injection, and UART end-to-end verification against a Python golden model.
+                </p>
+                <ul class="bullet-list">
+                  <li>
+                    <strong>Pipeline Integration (<code>tx_rx_dsp_top.v</code>):</strong> Integrated all six
+                    DSP stages with stage-to-stage <code>valid</code>/<code>done</code> handshaking,
+                    <code>i_start</code>/<code>o_done</code> transaction control, and synchronous active-low reset.
+                  </li>
+                  <li>
+                    <strong>Error-Injection Channel (<code>bit_flip_channel.v</code>):</strong> Designed
+                    deterministic LFSR-driven single-bit and double-bit error injection with collision
+                    handling and persistent LFSR state across transactions.
+                  </li>
+                  <li>
+                    <strong>System-Level Verification:</strong> Verified <strong>154,373 self-checking DSP
+                    comparisons (0 errors)</strong> across 384 transactions and 24,576 BPSK/noise samples,
+                    plus <strong>96 UART end-to-end requests (577 checks, 0 errors)</strong>.
+                  </li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://github.com/ntue2719-commits/secDED-bpsk-fpga"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Team Repository (secDED-bpsk-fpga)
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Technical Inspector -->
+              <div class="inspector-panel" data-inspector>
+                <div class="inspector-tabs" role="tablist" aria-label="COS201 technical views">
+                  <button type="button" class="insp-tab is-active" role="tab" aria-selected="true" data-tab="pipeline">
+                    RTL Pipeline
+                  </button>
+                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="ownership">
+                    My RTL Scope
+                  </button>
+                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="metrics">
+                    Synthesis &amp; Sim
+                  </button>
+                </div>
+
+                <div class="insp-pane is-active" data-pane="pipeline">
+                  <p class="insp-caption mono">COMPLETE 6-STAGE DSP + UART DATAFLOW</p>
+                  <div class="stage-flow">
+                    <span class="stage-chip">UART RX &amp; Controller</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip is-highlight">tx_rx_dsp_top</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">Hamming SECDED (8,4) Enc</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip is-highlight">bit_flip_channel</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">BPSK Modulator</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">LFSR Noise Injector</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">BPSK Demodulator</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">Hamming SECDED Dec</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">UART TX</span>
                   </div>
+                </div>
 
-                  <div class="dsa-item">
-                    <div class="dsa-head">
-                      <span class="dsa-title">LAB-03: Diagnostics &amp; Latency Profiling</span>
-                      <span class="mono text-emerald">PASS</span>
+                <div class="insp-pane" data-pane="ownership" hidden>
+                  <p class="insp-caption mono">ASSIGNED RTL MODULES &amp; REPORT CHAPTER</p>
+                  <ul class="owner-list">
+                    <li><code>tx_rx_dsp_top.v</code> &mdash; Top DSP datapath orchestrating all 6 stages, valid/done handshakes &amp; reset behavior</li>
+                    <li><code>bit_flip_channel.v</code> &mdash; LFSR single-bit / double-bit error modes, collision handling &amp; persistent state</li>
+                    <li><strong>System Verification</strong> &mdash; End-to-end <code>tx_rx_dsp_top</code> &amp; <code>fpga_top</code> UART regression integration</li>
+                    <li><strong>Technical Report</strong> &mdash; Authored Chapter 1 (System Overview &amp; RTL Architecture)</li>
+                  </ul>
+                </div>
+
+                <div class="insp-pane" data-pane="metrics" hidden>
+                  <p class="insp-caption mono">VERIFICATION &amp; FPGA RESOURCE UTILIZATION (50 MHz)</p>
+                  <div class="mini-metrics-grid">
+                    <div class="mini-metric">
+                      <span class="mini-label mono">DSP Verification</span>
+                      <span class="mini-val mono text-emerald">154,373 checks (0 err)</span>
                     </div>
-                    <div class="dsa-sub mono">GDB remote triage, Valgrind leak checks, perf &amp; cyclictest</div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">UART End-to-End</span>
+                      <span class="mini-val mono text-emerald">577 checks (0 err)</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">Utilization</span>
+                      <span class="mini-val mono">165 LUT / 213 FF</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">Timing &amp; Power</span>
+                      <span class="mini-val mono text-cyan">WNS +17.949 ns &bull; 0.289 W</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: DGT302 -->
+          <article class="card project-card" data-category="fpga">
+            <div class="project-layout">
+              <div class="project-info">
+                <div class="project-meta-row">
+                  <span class="badge badge-cyan mono">DGT302 // AMD KRIA KR260 SoC</span>
+                  <span class="role-badge mono">Window &amp; Sync RTL Engineer</span>
+                </div>
+                <h3>Median-Sobel Image Processing Accelerator on KR260</h3>
+                <p class="project-summary">
+                  Streaming FPGA SoC accelerator for salt-and-pepper noise removal and Sobel edge
+                  detection in Verilog-2001, integrated via AXI4-Lite with the ARM Processing System
+                  of the AMD Kria KR260 and validated against Python &amp; ARM C baselines.
+                </p>
+                <ul class="bullet-list">
+                  <li>
+                    <strong>3&times;3 Sliding Window Generator (<code>window_3x3.v</code>):</strong> Implemented
+                    3-row shift-register window extraction (<code>p00</code> to <code>p22</code>) instantiated
+                    ahead of both <code>median_3x3</code> and <code>sobel_3x3</code>, including x/y tracking and border rules.
+                  </li>
+                  <li>
+                    <strong>Pipeline Coordinate Synchronization:</strong> Co-designed <code>o_valid</code>,
+                    <code>o_x</code>, and <code>o_y</code> alignment across the cascaded 2-stage 3&times;3
+                    pipeline yielding exact <code>N_OUTPUT = (W-4)(H-4)</code> valid edges.
+                  </li>
+                  <li>
+                    <strong>Timing Closure &amp; Board Bring-Up:</strong> Verified <strong>516,133 datapath checks
+                    (0 errors)</strong> on 512&times;512 frames and <strong>24,041 AXI regression checks</strong>;
+                    met 100 MHz timing on Kria K26 (<code>WNS +0.322 ns</code>) and ran physical KR260 Linux MMIO.
+                  </li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://github.com/ntue2719-commits/image-dsp-benchmark"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Team Repository (image-dsp-benchmark)
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Technical Inspector -->
+              <div class="inspector-panel" data-inspector>
+                <div class="inspector-tabs" role="tablist" aria-label="DGT302 technical views">
+                  <button type="button" class="insp-tab is-active" role="tab" aria-selected="true" data-tab="pipeline">
+                    Streaming Core
+                  </button>
+                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="ownership">
+                    My RTL Scope
+                  </button>
+                  <button type="button" class="insp-tab" role="tab" aria-selected="false" data-tab="metrics">
+                    KR260 Metrics
+                  </button>
+                </div>
+
+                <div class="insp-pane is-active" data-pane="pipeline">
+                  <p class="insp-caption mono">CASCADED 3&times;3 MEDIAN-SOBEL STREAMING PIPELINE</p>
+                  <div class="stage-flow">
+                    <span class="stage-chip">line_buffer #1</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip is-highlight">window_3x3 #1</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">median_3x3</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">line_buffer #2</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip is-highlight">window_3x3 #2</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">sobel_3x3</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">|Gx|+|Gy| &amp; threshold</span>
+                    <span class="stage-arrow" aria-hidden="true">&rarr;</span>
+                    <span class="stage-chip">AXI4-Lite &amp; KR260 MMIO</span>
+                  </div>
+                </div>
+
+                <div class="insp-pane" data-pane="ownership" hidden>
+                  <p class="insp-caption mono">ASSIGNED RTL MODULE &amp; VERIFICATION CHAPTER</p>
+                  <ul class="owner-list">
+                    <li><code>window_3x3.v</code> &mdash; 3-row shift registers, <code>p00..p22</code> parallel neighborhood outputs, x/y border handling</li>
+                    <li><strong>Latency Synchronization</strong> &mdash; Co-authored <code>o_valid</code>, <code>o_x</code>, <code>o_y</code> pipeline alignment for <code>(W-4)(H-4)</code> valid outputs</li>
+                    <li><strong>Module Verification</strong> &mdash; Designed sliding-window testbench scenarios, waveform verification &amp; Section 8.3 documentation</li>
+                  </ul>
+                </div>
+
+                <div class="insp-pane" data-pane="metrics" hidden>
+                  <p class="insp-caption mono">VERIFICATION &amp; AMD KRIA K26 SYNTHESIS (100 MHz)</p>
+                  <div class="mini-metrics-grid">
+                    <div class="mini-metric">
+                      <span class="mini-label mono">512&times;512 Datapath</span>
+                      <span class="mini-val mono text-emerald">516,133 checks (0 err)</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">AXI Two-Frame Reg</span>
+                      <span class="mini-val mono text-emerald">24,041 checks (0 err)</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">K26 Utilization</span>
+                      <span class="mini-val mono">3,560 LUT &bull; 3,406 Reg &bull; 2 BRAM</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="mini-label mono">100 MHz Timing</span>
+                      <span class="mini-val mono text-cyan">WNS +0.322 ns &bull; MET</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -519,10 +612,10 @@
     <section id="terminal" class="section section-bordered">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow mono">INTERACTIVE SHELL</p>
-          <h2>Engineering CLI Explorer</h2>
+          <p class="eyebrow mono">INTERACTIVE CLI</p>
+          <h2>Engineering Console</h2>
           <p class="section-subtitle">
-            Click a quick command or type directly below to inspect profile specs, skills, and benchmark summaries.
+            Click any command chip or type directly to query my real semester projects, RTL ownership, and system specifications.
           </p>
         </div>
 
@@ -533,16 +626,17 @@
               <span class="dot dot-amber"></span>
               <span class="dot dot-green"></span>
             </div>
-            <span class="terminal-title mono">bao@fpt-ic-lab: ~/portfolio</span>
+            <span class="terminal-title mono">bao@fpt-ic-lab: ~/semester-projects</span>
             <button type="button" class="btn-clear mono" id="terminal-clear">clear</button>
           </div>
 
           <div class="terminal-chips" role="group" aria-label="Quick terminal commands">
             <button type="button" class="chip mono" data-cmd="help">help</button>
             <button type="button" class="chip mono" data-cmd="whoami">whoami</button>
+            <button type="button" class="chip mono" data-cmd="los201">los201</button>
+            <button type="button" class="chip mono" data-cmd="cos201">cos201</button>
+            <button type="button" class="chip mono" data-cmd="dgt302">dgt302</button>
             <button type="button" class="chip mono" data-cmd="skills">skills</button>
-            <button type="button" class="chip mono" data-cmd="projects">projects</button>
-            <button type="button" class="chip mono" data-cmd="benchmark --threads 8">benchmark --threads 8</button>
             <button type="button" class="chip mono" data-cmd="contact">contact</button>
           </div>
 
@@ -556,7 +650,7 @@
               type="text"
               autocomplete="off"
               spellcheck="false"
-              placeholder="Type a command (e.g. help, whoami, benchmark --threads 8)..."
+              placeholder="Type a command (e.g. help, los201, cos201, dgt302)..."
             />
           </form>
         </div>
@@ -567,15 +661,15 @@
     <section id="contact" class="section section-bordered">
       <div class="container contact-grid">
         <div class="card">
-          <div class="card-tag mono text-cyan">ACADEMIC BACKGROUND</div>
-          <h3>Education &amp; Languages</h3>
+          <div class="card-tag mono text-cyan">EDUCATION &amp; BACKGROUND</div>
+          <h3>Academic Profile &amp; Languages</h3>
           <div class="edu-block">
             <div class="edu-row">
               <strong>FPT University</strong>
               <span class="mono text-cyan">2024 &ndash; Present</span>
             </div>
             <p>Major: <strong>IC Design</strong> (Integrated Circuit Design)</p>
-            <p>Cumulative GPA: <strong class="mono">7.8 / 10</strong></p>
+            <p>Campus: Ho Chi Minh City, Vietnam</p>
           </div>
 
           <div class="lang-block">
@@ -588,11 +682,11 @@
         </div>
 
         <div class="card">
-          <div class="card-tag mono text-emerald">GET IN TOUCH</div>
-          <h3>Contact &amp; Direct Links</h3>
+          <div class="card-tag mono text-emerald">DIRECT CONTACT</div>
+          <h3>Connect &amp; Download CV</h3>
           <p class="contact-desc">
-            Available for <strong>C++ Software Engineer Intern</strong> and
-            <strong>IC Design / EDA Tooling Intern</strong> roles in Ho Chi Minh City or remote teams.
+            Open to <strong>IC Design / RTL Verification Intern</strong>, <strong>FPGA Engineering Intern</strong>,
+            and <strong>Embedded Linux / C++ Software Intern</strong> opportunities.
           </p>
 
           <div class="contact-items">
@@ -634,7 +728,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Embedded Linux (LOS)
+                LOS Repository
               </a>
               <a
                 class="btn btn-primary btn-sm"
@@ -652,7 +746,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p class="mono">Ha Gia Bao &bull; C++ Systems &amp; IC Design Portfolio</p>
+      <p class="mono">Ha Gia Bao &bull; IC Design, FPGA RTL &amp; Embedded Linux Portfolio</p>
       <p class="text-muted">Hosted on GitHub Pages (<code>weliuliu123-byte.github.io</code>)</p>
     </div>
   </footer>

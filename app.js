@@ -19,97 +19,54 @@
     });
   }
 
-  // 2. Interactive Thread-Scaling Benchmark Switcher
-  const BENCHMARK_MODES = {
-    single_copy: {
-      time: "14.80 s",
-      timePct: 100,
-      throughput: "67.5 MB/s",
-      throughputPct: 14,
-      speedup: "1.00x",
-      speedupPct: 14,
-      memory: "1,420 MB",
-      memoryPct: 100,
-      leak: "Manual Cleanup",
-      note: "Baseline single-threaded parser allocates new std::string objects per log line, causing heavy heap pressure."
-    },
-    single_view: {
-      time: "7.45 s",
-      timePct: 50,
-      throughput: "134.2 MB/s",
-      throughputPct: 28,
-      speedup: "1.99x",
-      speedupPct: 28,
-      memory: "390 MB",
-      memoryPct: 27,
-      leak: "0 B Leaked",
-      note: "Replacing string copies with zero-copy std::string_view halves runtime and cuts peak RSS by >70%."
-    },
-    threads_4: {
-      time: "3.60 s",
-      timePct: 24,
-      throughput: "277.8 MB/s",
-      throughputPct: 58,
-      speedup: "4.11x",
-      speedupPct: 58,
-      memory: "305 MB",
-      memoryPct: 21,
-      leak: "0 B Leaked",
-      note: "4-thread newline-aligned chunking processes independent byte partitions with thread-local stat maps."
-    },
-    threads_8: {
-      time: "2.10 s",
-      timePct: 14,
-      throughput: "476.2 MB/s",
-      throughputPct: 100,
-      speedup: "7.05x",
-      speedupPct: 100,
-      memory: "310 MB",
-      memoryPct: 22,
-      leak: "0 B Leaked",
-      note: "Zero-copy tokenization + thread-local aggregation eliminates allocator lock contention across 8 worker threads."
-    }
-  };
+  // 2. Semester Project Category Filter
+  const filterBtns = document.querySelectorAll(".filter-btn[data-filter]");
+  const projectCards = document.querySelectorAll(".project-card[data-category]");
 
-  const benchTabs = document.querySelectorAll(".bench-tab");
-  const valTime = document.getElementById("val-time");
-  const barTime = document.getElementById("bar-time");
-  const valThroughput = document.getElementById("val-throughput");
-  const barThroughput = document.getElementById("bar-throughput");
-  const valSpeedup = document.getElementById("val-speedup");
-  const barSpeedup = document.getElementById("bar-speedup");
-  const valMemory = document.getElementById("val-memory");
-  const barMemory = document.getElementById("bar-memory");
-  const leakStatus = document.getElementById("bench-leak-status");
-  const benchNote = document.getElementById("bench-note");
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter || "all";
 
-  function setBenchmarkMode(modeKey) {
-    const data = BENCHMARK_MODES[modeKey];
-    if (!data) return;
+      filterBtns.forEach((b) => {
+        const active = b === btn;
+        b.classList.toggle("is-active", active);
+        b.setAttribute("aria-pressed", String(active));
+      });
 
-    benchTabs.forEach((tab) => {
-      const active = tab.dataset.mode === modeKey;
-      tab.classList.toggle("is-active", active);
-      tab.setAttribute("aria-pressed", String(active));
+      projectCards.forEach((card) => {
+        const matches = filter === "all" || card.dataset.category === filter;
+        card.classList.toggle("is-hidden", !matches);
+      });
     });
-
-    if (valTime) valTime.textContent = data.time;
-    if (barTime) barTime.style.width = `${data.timePct}%`;
-    if (valThroughput) valThroughput.textContent = data.throughput;
-    if (barThroughput) barThroughput.style.width = `${data.throughputPct}%`;
-    if (valSpeedup) valSpeedup.textContent = data.speedup;
-    if (barSpeedup) barSpeedup.style.width = `${data.speedupPct}%`;
-    if (valMemory) valMemory.textContent = data.memory;
-    if (barMemory) barMemory.style.width = `${data.memoryPct}%`;
-    if (leakStatus) leakStatus.textContent = data.leak;
-    if (benchNote) benchNote.textContent = data.note;
-  }
-
-  benchTabs.forEach((tab) => {
-    tab.addEventListener("click", () => setBenchmarkMode(tab.dataset.mode));
   });
 
-  // 3. Interactive Engineering Terminal
+  // 3. Per-Project Technical Inspector Tabs
+  const inspectors = document.querySelectorAll("[data-inspector]");
+
+  inspectors.forEach((inspector) => {
+    const tabs = inspector.querySelectorAll(".insp-tab[data-tab]");
+    const panes = inspector.querySelectorAll(".insp-pane[data-pane]");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.tab;
+
+        tabs.forEach((t) => {
+          const active = t === tab;
+          t.classList.toggle("is-active", active);
+          t.setAttribute("aria-selected", String(active));
+        });
+
+        panes.forEach((pane) => {
+          const isMatch = pane.dataset.pane === target;
+          pane.classList.toggle("is-active", isMatch);
+          pane.hidden = !isMatch;
+        });
+      });
+    });
+  });
+
+  // 4. Interactive Engineering Console
   const terminalOutput = document.getElementById("terminal-output");
   const terminalForm = document.getElementById("terminal-form");
   const terminalInput = document.getElementById("terminal-input");
@@ -119,45 +76,56 @@
   const TERMINAL_RESPONSES = {
     help: [
       "Available commands:",
-      "  whoami                 - Display engineer profile & academic info",
-      "  skills                 - List C++, Systems, and IC Design core competencies",
-      "  projects               - Summarize featured projects",
-      "  benchmark --threads 8  - Print 8-thread simulation log analyzer telemetry",
-      "  contact                - Show direct contact details",
-      "  clear                  - Clear terminal buffer"
+      "  whoami   - Display engineer profile & affiliation",
+      "  los201   - Embedded Linux Systems (ARM Cortex-A9 drivers & POSIX daemon)",
+      "  cos201   - FPGA SECDED (8,4) + BPSK Pipeline (tx_rx_dsp_top, bit_flip_channel)",
+      "  dgt302   - AMD Kria KR260 Median-Sobel Accelerator (window_3x3 & sync)",
+      "  skills   - List RTL, Embedded Linux & verification stack",
+      "  contact  - Show direct email, GitHub & phone details",
+      "  clear    - Clear console output"
     ].join("\n"),
     whoami: [
       "Name       : Ha Gia Bao",
-      "Role       : C++ Software Engineer Intern | IC Design Student",
-      "University : FPT University (2024 - Present)",
-      "Major      : IC Design (GPA: 7.8 / 10)",
+      "Focus      : IC Design, FPGA RTL & Embedded Linux Systems",
+      "University : FPT University (2024 - Present) | Major: IC Design",
       "Location   : Ho Chi Minh City, Vietnam",
       "Languages  : Vietnamese (Native), English (Professional)"
     ].join("\n"),
+    los201: [
+      "[LOS201] Embedded Linux Systems (Sole Author)",
+      "  Repo     : https://github.com/weliuliu123-byte/LOS",
+      "  Target   : QEMU ARMv7-A Cortex-A9 (vexpress-a9), Linux 6.1.90 LTS, BusyBox 1.35.0",
+      "  Drivers  : /dev/lab2 (Major 240), 20/20 extension exercises (sysfs/procfs/atomic_t),",
+      "             /dev/asgn1 IOCTL, /dev/counter misc device, 32MB MTD/nandsim JFFS2 flash",
+      "  Userspace: 4-thread POSIX real-time sensor daemon (sms_app + /dev/sms_sensor)",
+      "  Debug/RT : GDB remote triage, Valgrind (0 leaks), perf & cyclictest"
+    ].join("\n"),
+    cos201: [
+      "[COS201] FPGA SECDED (8,4) + BPSK Communication Pipeline",
+      "  Repo     : https://github.com/ntue2719-commits/secDED-bpsk-fpga",
+      "  My Scope : tx_rx_dsp_top.v (6-stage pipeline integration) & bit_flip_channel.v (LFSR error injection)",
+      "  Verify   : 384 DSP transactions | 24,576 samples | 154,373 checks (0 errors)",
+      "             96 UART end-to-end requests | 577 checks (0 errors)",
+      "  Vivado   : 50 MHz | 165 LUTs | 213 FFs | WNS +17.949 ns | 0.289 W"
+    ].join("\n"),
+    dgt302: [
+      "[DGT302] Median-Sobel Image Processing Accelerator on AMD Kria KR260",
+      "  Repo     : https://github.com/ntue2719-commits/image-dsp-benchmark",
+      "  My Scope : window_3x3.v (3x3 shift-register sliding window) & o_valid/o_x/o_y pipeline sync",
+      "  Verify   : 512x512 Datapath 516,133 checks (0 err) | AXI regression 24,041 checks (0 err)",
+      "  Kria K26 : 100 MHz | 3,560 LUTs | 3,406 Regs | 2 BRAM | WNS +0.322 ns | Timing MET",
+      "  Bring-up : Physical KR260 FPGA Manager + Linux /dev/mem mmap() control"
+    ].join("\n"),
     skills: [
-      "[Systems & C++]   Modern C/C++ (OOP, STL, Smart Pointers), Memory Management",
-      "[Concurrency]     Multithreading, OS Concepts, Chunk Partitioning",
-      "[Algorithms]      Trees, Graphs, Hashmaps, Sorting Optimization",
-      "[IC & EDA]        IC Design Fundamentals, Large-Scale Simulation Log Processing"
-    ].join("\n"),
-    projects: [
-      "1) High-Performance Data Processing Tool (2025 - Present | FPT University)",
-      "   - Parses & analyzes large hardware simulation logs in Modern C++ & STL",
-      "   - Multithreaded chunk processing + strict smart-pointer memory safety",
-      "2) Algorithms & Data Structures Optimization (2024 - 2025 | Coursework)",
-      "   - Optimized Trees, Graphs, Hashmaps, and Sorting for complex data parsing"
-    ].join("\n"),
-    "benchmark --threads 8": [
-      "[sim_log_analyzer] Input      : 1.0 GB Hardware Sim Log (10M+ lines)",
-      "[sim_log_analyzer] Workers    : 8 threads (C++17 zero-copy std::string_view)",
-      "[sim_log_analyzer] Elapsed    : 2.10 s | Throughput: 476.2 MB/s | Speedup: 7.05x",
-      "[sim_log_analyzer] Memory     : Peak RSS 310 MB | 0 bytes leaked (RAII / Smart Pointers)"
+      "[RTL & FPGA]       Verilog-2001, Streaming Datapaths, Window/Line Buffers, Vivado/XSim STA",
+      "[Embedded Linux]   Linux 6.1.90 Kernel Modules, Character Drivers, IOCTL, sysfs/procfs, JFFS2",
+      "[Systems & Co-Sim] C / Modern C++, Python Golden Models, POSIX Threads, GDB, Valgrind, perf"
     ].join("\n"),
     contact: [
       "Email   : weliuliu132@gmail.com",
       "Phone   : +84 344 482 490",
-      "City    : Ho Chi Minh City, Vietnam",
-      "Resume  : ./Ha_Gia_Bao_Resume.pdf"
+      "GitHub  : https://github.com/weliuliu123-byte",
+      "Web     : https://weliuliu123-byte.github.io"
     ].join("\n")
   };
 
@@ -188,18 +156,13 @@
       return;
     }
 
-    if (normalized.startsWith("benchmark")) {
-      appendTerminalEntry(cmd, TERMINAL_RESPONSES["benchmark --threads 8"]);
-      return;
-    }
-
     const reply = TERMINAL_RESPONSES[normalized];
     if (reply) {
       appendTerminalEntry(cmd, reply);
     } else {
       appendTerminalEntry(
         cmd,
-        `Command not found: '${cmd}'. Type 'help' to see supported commands.`
+        `Command not found: '${cmd}'. Type 'help' for supported commands.`
       );
     }
   }
@@ -228,7 +191,7 @@
     });
   }
 
-  // 4. Resume Preview Modal (<dialog>)
+  // 5. Resume Preview Modal (<dialog>)
   const resumeModal = document.getElementById("resume-modal");
   const openModalBtn = document.getElementById("open-resume-modal");
   const closeModalBtn = document.getElementById("close-resume-modal");
@@ -256,7 +219,7 @@
     });
   }
 
-  // 5. One-Click Email Copy
+  // 6. One-Click Email Copy
   const copyEmailBtn = document.getElementById("copy-email-btn");
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener("click", async () => {
