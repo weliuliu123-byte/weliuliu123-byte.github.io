@@ -93,30 +93,20 @@
           <h1>Digital IC &amp; Verilog RTL Portfolio</h1>
           <p class="hero-lead">
             I am <strong>Ha Gia Bao</strong>, an <strong>IC Design</strong> student at
-            <strong>FPT University</strong> (Ho Chi Minh City). Across my semester team projects, I
-            personally designed core <strong>Verilog</strong> modules (<code>window_3x3.v</code>,
-            <code>tx_rx_dsp_top.v</code>, <code>bit_flip_channel.v</code>), co-designed multi-stage
-            coordinate/valid synchronization, and ran self-checking <strong>Vivado XSim</strong>
-            system verification against Python-generated golden vectors.
+            <strong>FPT University</strong> (Ho Chi Minh City). I focus on writing clean,
+            synthesizable <strong>Verilog</strong> modules, integrating multi-stage digital pipelines,
+            and verifying hardware behavior through <strong>Vivado XSim</strong> simulation and waveforms.
           </p>
 
-          <!-- 4-Card KPI Strip (Personal Verified Scope) -->
-          <div class="hero-kpi-grid" aria-label="My verified engineering KPIs">
+          <!-- Clean Focus Summary (No Report Stats) -->
+          <div class="hero-kpi-grid" aria-label="Core project focus">
             <div class="kpi-card">
-              <span class="kpi-value mono text-emerald">154,373</span>
-              <span class="kpi-label">tx_rx_dsp_top Checks (0 Err)</span>
+              <span class="kpi-value mono text-cyan">COS201</span>
+              <span class="kpi-label">Top-Level Integration &amp; Fault Channel RTL</span>
             </div>
             <div class="kpi-card">
-              <span class="kpi-value mono text-cyan">1,537</span>
-              <span class="kpi-label">bit_flip_channel Checks (0 Err)</span>
-            </div>
-            <div class="kpi-card">
-              <span class="kpi-value mono text-emerald">577</span>
-              <span class="kpi-label">UART E2E Checks (96 Req PASS)</span>
-            </div>
-            <div class="kpi-card">
-              <span class="kpi-value mono text-cyan">3 RTL</span>
-              <span class="kpi-label">Modules Owned + Sync Co-Design</span>
+              <span class="kpi-value mono text-emerald">DGT302</span>
+              <span class="kpi-label">3&times;3 Sliding Window RTL &amp; Pipeline Sync</span>
             </div>
           </div>
 
@@ -206,10 +196,10 @@
     <section id="capabilities" class="section section-bordered">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow mono">MY CONTRIBUTIONS &amp; SKILLS</p>
-          <h2>What I Personally Built &amp; Verified</h2>
+          <p class="eyebrow mono">WHAT I DO</p>
+          <h2>Core RTL &amp; Verification Skills</h2>
           <p class="section-subtitle">
-            Scoped strictly to the RTL blocks, top-level integrations, timing synchronization, and testbenches I authored.
+            Hands-on areas I handled across my semester hardware design teams.
           </p>
         </div>
 
@@ -229,16 +219,16 @@
                 <line x1="1" y1="14" x2="4" y2="14"></line>
               </svg>
             </div>
-            <span class="card-kicker mono text-cyan">01 // STREAMING WINDOW RTL</span>
-            <h3>3&times;3 Sliding Window &amp; Sync</h3>
+            <span class="card-kicker mono text-cyan">01 // RTL MODULE DESIGN</span>
+            <h3>Verilog Subsystems</h3>
             <p>
-              Authored <code>window_3x3.v</code> using 6 column shift flip-flops plus a 0-cycle
-              combinational rightmost tap, and co-designed coordinate/valid alignment across cascaded stages.
+              Designing clean, synthesizable Verilog modules such as shift-register sliding windows
+              and deterministic error-injection channels.
             </p>
             <ul class="pill-row">
               <li>window_3x3.v</li>
-              <li>6-DFF Shift Reg</li>
-              <li>o_valid / o_x / o_y</li>
+              <li>bit_flip_channel.v</li>
+              <li>Verilog-2001</li>
             </ul>
           </article>
 
@@ -248,17 +238,16 @@
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
               </svg>
             </div>
-            <span class="card-kicker mono text-emerald">02 // TOP-LEVEL &amp; FAULT CHANNEL</span>
-            <h3>DSP Integration &amp; Error Injection</h3>
+            <span class="card-kicker mono text-emerald">02 // SYSTEM INTEGRATION</span>
+            <h3>Pipeline Integration &amp; Sync</h3>
             <p>
-              Built <code>tx_rx_dsp_top.v</code> with <code>r_busy</code> gating and
-              <code>o_done</code> handshakes across 6 stages, plus <code>bit_flip_channel.v</code>
-              LFSR fault injection with collision resolution.
+              Wiring multi-stage datapaths cleanly at the top level and aligning control, valid,
+              and coordinate handshakes between team modules.
             </p>
             <ul class="pill-row">
               <li>tx_rx_dsp_top.v</li>
-              <li>bit_flip_channel.v</li>
-              <li>valid / done Handshake</li>
+              <li>Pipeline Sync</li>
+              <li>Handshake Logic</li>
             </ul>
           </article>
 
@@ -269,16 +258,16 @@
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <span class="card-kicker mono text-cyan">03 // SYSTEM VERIFICATION</span>
-            <h3>Self-Checking XSim Testbenches</h3>
+            <span class="card-kicker mono text-cyan">03 // SIMULATION</span>
+            <h3>Testbenches &amp; Waveforms</h3>
             <p>
-              Verified <code>bit_flip_channel</code> (1,537 checks), full <code>tx_rx_dsp_top</code>
-              (154,373 checks), UART end-to-end tests, and <code>window_3x3</code> waveforms with 0 mismatches.
+              Writing self-checking testbenches against reference test vectors and debugging timing
+              and edge cases in Vivado XSim waveforms.
             </p>
             <ul class="pill-row">
-              <li>tb_tx_rx_dsp_top.sv</li>
-              <li>tb_bit_flip_channel.sv</li>
-              <li>XSim Waveforms</li>
+              <li>Vivado XSim</li>
+              <li>SystemVerilog TB</li>
+              <li>Waveform Debug</li>
             </ul>
           </article>
         </div>
@@ -322,56 +311,27 @@
               </a>
             </header>
 
-            <!-- Tier 1: 4 Compact KPI Cards (Strictly Personal Scope) -->
-            <div class="tier1-kpi-row" aria-label="DGT302 personal contribution metrics">
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">MY RTL MODULE</span>
-                <strong class="tier1-val mono text-cyan">6 DFFs</strong>
-                <span class="tier1-sub mono">0-Cycle Tap &bull; 9&times;8-bit p00..p22 Out</span>
-              </div>
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">PIPELINE INSTANCES</span>
-                <strong class="tier1-val mono">2 Stages</strong>
-                <span class="tier1-sub mono">u_win1 (Median) &amp; u_win2 (Sobel)</span>
-              </div>
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">SYNC &amp; VALID REGION</span>
-                <strong class="tier1-val mono text-emerald">(W-4)(H-4)</strong>
-                <span class="tier1-sub mono">x=2..W-3, y=2..H-3 Border Gating</span>
-              </div>
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">REPORT &amp; VERIFICATION</span>
-                <strong class="tier1-val mono text-emerald">Sec 7.2.3 &amp; 8.3</strong>
-                <span class="tier1-sub mono">i_en Stall Hold + Co-Owner Sec 7.2.8</span>
-              </div>
-            </div>
-
-            <!-- Tier 2: Engineering Notes (Left) + Visual Evidence Tabs (Right) -->
+            <!-- Tier 2: Concise Role Notes (Left) + Visual Evidence Tabs (Right) -->
             <div class="tier2-grid" data-evidence-group>
               <div class="tier2-notes">
-                <h4>My Contribution vs. Team Scope</h4>
+                <h4>What I Worked On</h4>
                 <p class="notes-lead">
-                  In this 5-member KR260 SoC team project (teammates built line buffers, filters,
-                  AXI4-Lite wrapper, STA, and Linux MMIO), I owned the 3&times;3 sliding window RTL
-                  and co-designed pipeline synchronization.
+                  A 5-member team project building a median filtering and Sobel edge detection pipeline in
+                  Verilog. Teammates handled the line buffers, filter math, AXI4-Lite integration, and board bring-up.
                 </p>
                 <ul class="clean-list">
                   <li>
-                    <strong><code>window_3x3.v</code> RTL (Owner):</strong> Implemented the 6-register
-                    horizontal shift array (<code>p00_reg, p01_reg</code> per row) with 0-cycle
-                    combinational rightmost taps (<code>i_row0..2</code>), synchronous reset (<code>i_rst</code>),
-                    and clock-enable stall freezing (<code>i_en</code>).
+                    <strong>3&times;3 Sliding Window (<code>window_3x3.v</code>):</strong> Implemented the
+                    shift-register window generator that accepts three buffered pixel rows and outputs a
+                    parallel 3&times;3 neighborhood each cycle, with stall-enable and reset support.
                   </li>
                   <li>
-                    <strong>Valid &amp; Coordinate Sync (Co-Owner with Tuệ):</strong> Aligned window
-                    valid gating (<code>x &gt;= 2, y &gt;= 2</code> for <code>u_win1</code>;
-                    <code>x &gt;= 3, y &gt;= 3</code> for <code>u_win2</code>) and center coordinates
-                    (<code>lb_x - 1, lb_y - 1</code>) for exact <code>(W-4)(H-4)</code> valid outputs.
+                    <strong>Pipeline Synchronization:</strong> Worked with teammates to align valid signals
+                    and pixel coordinates across the cascaded filter stages so border handling stays accurate.
                   </li>
                   <li>
-                    <strong>Verification &amp; Docs (Sec 7.2.3 &amp; 8.3):</strong> Verified 3&times;3
-                    neighborhood assembly, <code>i_en</code> stall-hold timing, border behavior, and
-                    simulation waveforms for the window generator subsystem.
+                    <strong>Module Verification:</strong> Checked window assembly, stall freezing, and valid
+                    timing using Vivado simulation waveforms.
                   </li>
                 </ul>
               </div>
@@ -414,7 +374,7 @@
                     </span>
                   </button>
                   <p class="figure-caption">
-                    <code>window_3x3.v</code> combinational + 6-DFF shift register architecture feeding parallel <code>p00..p22</code> neighborhoods.
+                    Architecture diagram of <code>window_3x3.v</code> shifting incoming row pixels into a 3&times;3 window.
                   </p>
                 </div>
 
@@ -443,7 +403,7 @@
                     </span>
                   </button>
                   <p class="figure-caption">
-                    Cycle-accurate timing waveform verifying border gating (<code>x &gt;= 2, y &gt;= 2</code>) and pipeline stall hold behavior.
+                    Timing waveform verifying valid gating and pipeline stall behavior for <code>window_3x3.v</code>.
                   </p>
                 </div>
 
@@ -535,57 +495,29 @@
               </a>
             </header>
 
-            <!-- Tier 1: 4 Compact KPI Cards (Strictly Personal Scope) -->
-            <div class="tier1-kpi-row" aria-label="COS201 personal contribution metrics">
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">tx_rx_dsp_top VERIFY</span>
-                <strong class="tier1-val mono text-emerald">154,373</strong>
-                <span class="tier1-sub mono">0 Errors &bull; 384 Tx &bull; 24,576 Samples</span>
-              </div>
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">bit_flip_channel VERIFY</span>
-                <strong class="tier1-val mono text-cyan">1,537</strong>
-                <span class="tier1-sub mono">0 Errors &bull; LFSR Seed 8'hA5 PASS</span>
-              </div>
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">UART E2E SIMULATION</span>
-                <strong class="tier1-val mono text-emerald">577</strong>
-                <span class="tier1-sub mono">0 Errors &bull; 96 UART Requests PASS</span>
-              </div>
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">CHAPTER 1 &amp; RTL</span>
-                <strong class="tier1-val mono text-cyan">6 Stages</strong>
-                <span class="tier1-sub mono">Top Wrapper + 1-Cycle Fault Channel</span>
-              </div>
-            </div>
-
-            <!-- Tier 2: Engineering Notes (Left) + Visual Evidence Stage (Right) -->
+            <!-- Tier 2: Concise Role Notes (Left) + Visual Evidence Stage (Right) -->
             <div class="tier2-grid" data-evidence-group>
               <div class="tier2-notes">
-                <h4>My Contribution vs. Team Scope</h4>
+                <h4>What I Worked On</h4>
                 <p class="notes-lead">
-                  In this 5-member baseband communication project (teammates built Hamming codec,
-                  BPSK mod/demod, LFSR noise injector, and Vivado synthesis analysis), I owned
-                  system-level integration, the bit-flip error channel, and system verification.
+                  A 5-member team project building a SECDED (8,4) + BPSK communication pipeline in
+                  Verilog. Teammates handled the encoder/decoder, BPSK mod/demod, noise injector, and synthesis analysis.
                 </p>
                 <ul class="clean-list">
                   <li>
-                    <strong>System Top-Level (<code>tx_rx_dsp_top.v</code>):</strong> Integrated all
-                    6 DSP modules under synchronous active-low reset (<code>i_rst_n</code>), latching
-                    <code>i_noise_level</code>/<code>i_err_mode</code> on <code>w_start_gated</code>
-                    (<code>i_start &amp;&amp; !r_busy</code>) and emitting a 1-clock <code>o_done</code> pulse.
+                    <strong>Top-Level Integration (<code>tx_rx_dsp_top.v</code>):</strong> Wired all
+                    six DSP modules together, managing reset, transaction start/done control signals, and
+                    stage-to-stage handshakes.
                   </li>
                   <li>
                     <strong>Bit-Flip Channel (<code>bit_flip_channel.v</code>):</strong> Implemented the
-                    1-cycle latency 8-bit LFSR fault injector (<code>poly = x^8+x^6+x^5+x^4+1</code>,
-                    <code>seed = 8'hA5</code> with zero-lockup guard) supporting clean, 1-bit, and
-                    collision-free 2-bit flips.
+                    LFSR-based channel block to inject clean, single-bit, or double-bit errors into
+                    encoded codewords during simulation.
                   </li>
                   <li>
-                    <strong>System Verification &amp; Chapter 1:</strong> Verified
-                    <code>tb_bit_flip_channel</code> (<strong>1,537 checks</strong>),
-                    <code>tb_tx_rx_dsp_top</code> (<strong>154,373 checks</strong> / 384 tx / 24,576 samples),
-                    and UART E2E simulation checks with 0 errors, and authored Chapter 1.
+                    <strong>System Verification &amp; Docs:</strong> Simulated the integrated DSP
+                    pipeline and channel module against reference vectors in Vivado XSim, and wrote the
+                    system architecture overview.
                   </li>
                 </ul>
               </div>
@@ -638,7 +570,7 @@
                     type="button"
                     class="figure-btn fig-dark"
                     data-lightbox-src="./assets/waveform_tb_tx_rx_dsp_top.png"
-                    data-lightbox-caption="Vivado XSim behavioral simulation of tb_tx_rx_dsp_top (384 transactions, 154,373 checks, 0 errors)"
+                    data-lightbox-caption="Vivado XSim behavioral simulation waveform of tb_tx_rx_dsp_top"
                     aria-label="Zoom tb_tx_rx_dsp_top Vivado XSim waveform"
                   >
                     <img
@@ -657,7 +589,7 @@
                     </span>
                   </button>
                   <p class="figure-caption">
-                    Vivado XSim simulation of <code>tb_tx_rx_dsp_top</code> verifying <code>errors == 0</code> across 384 self-checking transactions.
+                    Vivado XSim simulation waveform verifying end-to-end transactions in <code>tx_rx_dsp_top.v</code>.
                   </p>
                 </div>
 
