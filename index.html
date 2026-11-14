@@ -6,7 +6,7 @@
   <title>Ha Gia Bao | Digital IC &amp; FPGA RTL Engineering Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Ha Gia Bao — IC Design student at FPT University specializing in synthesizable Verilog-2001 RTL design, FPGA accelerators on AMD Kria KR260, and self-checking hardware verification."
+    content="Portfolio of Ha Gia Bao — IC Design student at FPT University specializing in Verilog RTL modules (window_3x3, tx_rx_dsp_top, bit_flip_channel), pipeline synchronization, and self-checking XSim verification."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,33 +90,33 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="eyebrow mono">INTEGRATED CIRCUIT DESIGN // FPT UNIVERSITY</div>
-          <h1>Digital IC &amp; FPGA RTL Engineering Portfolio</h1>
+          <h1>Digital IC &amp; Verilog RTL Portfolio</h1>
           <p class="hero-lead">
             I am <strong>Ha Gia Bao</strong>, an <strong>IC Design</strong> student at
-            <strong>FPT University</strong> (Ho Chi Minh City). I design synthesizable
-            <strong>Verilog-2001</strong> streaming architectures, error-injection &amp; digital
-            communication pipelines, and bit-exact <strong>Python-to-RTL</strong> verification flows
-            validated through Vivado Static Timing Analysis and hardware bring-up on
-            <strong>AMD Kria KR260</strong>.
+            <strong>FPT University</strong> (Ho Chi Minh City). Across my semester team projects, I
+            personally designed core <strong>Verilog</strong> modules (<code>window_3x3.v</code>,
+            <code>tx_rx_dsp_top.v</code>, <code>bit_flip_channel.v</code>), co-designed multi-stage
+            coordinate/valid synchronization, and ran self-checking <strong>Vivado XSim</strong>
+            system verification against Python-generated golden vectors.
           </p>
 
-          <!-- 4-Card KPI Strip -->
-          <div class="hero-kpi-grid" aria-label="Verified engineering KPIs">
+          <!-- 4-Card KPI Strip (Personal Verified Scope) -->
+          <div class="hero-kpi-grid" aria-label="My verified engineering KPIs">
             <div class="kpi-card">
-              <span class="kpi-value mono text-emerald">516,133</span>
-              <span class="kpi-label">KR260 Datapath Checks (0 Err)</span>
+              <span class="kpi-value mono text-emerald">154,373</span>
+              <span class="kpi-label">tx_rx_dsp_top Checks (0 Err)</span>
             </div>
             <div class="kpi-card">
-              <span class="kpi-value mono text-cyan">154,373</span>
-              <span class="kpi-label">SECDED+BPSK Checks (0 Err)</span>
+              <span class="kpi-value mono text-cyan">1,537</span>
+              <span class="kpi-label">bit_flip_channel Checks (0 Err)</span>
             </div>
             <div class="kpi-card">
-              <span class="kpi-value mono text-emerald">100 MHz</span>
-              <span class="kpi-label">KR260 Timing Closure MET</span>
+              <span class="kpi-value mono text-emerald">577</span>
+              <span class="kpi-label">UART E2E Checks (96 Req PASS)</span>
             </div>
             <div class="kpi-card">
-              <span class="kpi-value mono text-cyan">50 MHz</span>
-              <span class="kpi-label">SECDED+BPSK Timing MET</span>
+              <span class="kpi-value mono text-cyan">3 RTL</span>
+              <span class="kpi-label">Modules Owned + Sync Co-Design</span>
             </div>
           </div>
 
@@ -168,13 +168,13 @@
           <div class="identity-divider"></div>
 
           <div class="stack-block">
-            <span class="stack-heading mono">CORE TOOLS &amp; FLOW</span>
+            <span class="stack-heading mono">MY WORKFLOW &amp; TOOLS</span>
             <ul class="pill-row" aria-label="Hardware and EDA tools">
               <li>Verilog-2001</li>
-              <li>Vivado &amp; XSim</li>
-              <li>AMD Kria KR260</li>
-              <li>AXI4-Lite</li>
-              <li>Python Golden Models</li>
+              <li>SystemVerilog TB</li>
+              <li>Vivado XSim</li>
+              <li>Golden HEX Vectors</li>
+              <li>Pipeline Synchronization</li>
               <li>C / Modern C++</li>
             </ul>
           </div>
@@ -206,10 +206,10 @@
     <section id="capabilities" class="section section-bordered">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow mono">ENGINEERING CAPABILITIES</p>
-          <h2>Core Hardware &amp; Verification Disciplines</h2>
+          <p class="eyebrow mono">MY CONTRIBUTIONS &amp; SKILLS</p>
+          <h2>What I Personally Built &amp; Verified</h2>
           <p class="section-subtitle">
-            From synthesizable RTL modules and deterministic datapath synchronization to Vivado STA and hardware bring-up.
+            Scoped strictly to the RTL blocks, top-level integrations, timing synchronization, and testbenches I authored.
           </p>
         </div>
 
@@ -229,16 +229,16 @@
                 <line x1="1" y1="14" x2="4" y2="14"></line>
               </svg>
             </div>
-            <span class="card-kicker mono text-cyan">01 // RTL ARCHITECTURE</span>
-            <h3>Synthesizable Verilog-2001</h3>
+            <span class="card-kicker mono text-cyan">01 // STREAMING WINDOW RTL</span>
+            <h3>3&times;3 Sliding Window &amp; Sync</h3>
             <p>
-              Designing 3&times;3 shift-register sliding windows, cascaded streaming pipelines,
-              LFSR error-injection channels, and stage-to-stage <code>valid</code>/<code>done</code> handshaking.
+              Authored <code>window_3x3.v</code> using 6 column shift flip-flops plus a 0-cycle
+              combinational rightmost tap, and co-designed coordinate/valid alignment across cascaded stages.
             </p>
             <ul class="pill-row">
               <li>window_3x3.v</li>
-              <li>tx_rx_dsp_top.v</li>
-              <li>bit_flip_channel.v</li>
+              <li>6-DFF Shift Reg</li>
+              <li>o_valid / o_x / o_y</li>
             </ul>
           </article>
 
@@ -248,16 +248,17 @@
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
               </svg>
             </div>
-            <span class="card-kicker mono text-emerald">02 // FPGA &amp; TIMING CLOSURE</span>
-            <h3>Vivado Synthesis &amp; STA</h3>
+            <span class="card-kicker mono text-emerald">02 // TOP-LEVEL &amp; FAULT CHANNEL</span>
+            <h3>DSP Integration &amp; Error Injection</h3>
             <p>
-              Taking RTL through synthesis, implementation, and Static Timing Analysis on
-              AMD Kria K26 (100 MHz) and 50 MHz FPGA targets with positive setup/hold margins.
+              Built <code>tx_rx_dsp_top.v</code> with <code>r_busy</code> gating and
+              <code>o_done</code> handshakes across 6 stages, plus <code>bit_flip_channel.v</code>
+              LFSR fault injection with collision resolution.
             </p>
             <ul class="pill-row">
-              <li>Vivado STA</li>
-              <li>WNS / WHS Closure</li>
-              <li>AXI4-Lite &amp; MMIO</li>
+              <li>tx_rx_dsp_top.v</li>
+              <li>bit_flip_channel.v</li>
+              <li>valid / done Handshake</li>
             </ul>
           </article>
 
@@ -268,16 +269,16 @@
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <span class="card-kicker mono text-cyan">03 // CO-VERIFICATION</span>
-            <h3>Golden-Model &amp; Board Bring-Up</h3>
+            <span class="card-kicker mono text-cyan">03 // SYSTEM VERIFICATION</span>
+            <h3>Self-Checking XSim Testbenches</h3>
             <p>
-              Building bit-exact Python golden models, self-checking XSim testbenches covering
-              hundreds of thousands of pixel/DSP checks, and KR260 Linux <code>/dev/mem</code> validation.
+              Verified <code>bit_flip_channel</code> (1,537 checks), full <code>tx_rx_dsp_top</code>
+              (154,373 checks), UART end-to-end tests, and <code>window_3x3</code> waveforms with 0 mismatches.
             </p>
             <ul class="pill-row">
-              <li>Python Golden Models</li>
+              <li>tb_tx_rx_dsp_top.sv</li>
+              <li>tb_bit_flip_channel.sv</li>
               <li>XSim Waveforms</li>
-              <li>KR260 /dev/mem</li>
             </ul>
           </article>
         </div>
@@ -288,10 +289,10 @@
     <section id="projects" class="section section-bordered">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow mono">SEMESTER CASE STUDIES</p>
-          <h2>Featured FPGA &amp; RTL Projects</h2>
+          <p class="eyebrow mono">SEMESTER TEAM PROJECTS &bull; PERSONAL SCOPE</p>
+          <h2>Featured FPGA &amp; RTL Contributions</h2>
           <p class="section-subtitle">
-            Two hardware systems built and verified this semester &mdash; click any schematic, waveform, or output image to inspect full resolution.
+            Both systems below were built by 5-member IC Design teams. Each section isolates the modules, synchronization logic, and verification work I personally authored.
           </p>
         </div>
 
@@ -301,10 +302,10 @@
             <header class="case-header">
               <div class="case-title-group">
                 <div class="case-badges">
-                  <span class="badge badge-cyan mono">DGT302 // AMD KRIA KR260 SoC</span>
-                  <span class="badge badge-neutral mono">RTL Owner: window_3x3.v &amp; Coordinate Sync</span>
+                  <span class="badge badge-cyan mono">DGT302 // 5-MEMBER TEAM PROJECT</span>
+                  <span class="badge badge-neutral mono">My Scope: window_3x3.v &amp; Coordinate Sync</span>
                 </div>
-                <h3>Median&ndash;Sobel Image Processing Accelerator on AMD Kria KR260</h3>
+                <h3>Median&ndash;Sobel Image Processing Pipeline &mdash; 3&times;3 Window &amp; Sync</h3>
               </div>
               <a
                 class="btn btn-secondary btn-sm"
@@ -321,53 +322,56 @@
               </a>
             </header>
 
-            <!-- Tier 1: 4 Compact KPI Cards -->
-            <div class="tier1-kpi-row" aria-label="DGT302 verified hardware metrics">
+            <!-- Tier 1: 4 Compact KPI Cards (Strictly Personal Scope) -->
+            <div class="tier1-kpi-row" aria-label="DGT302 personal contribution metrics">
               <div class="tier1-kpi">
-                <span class="tier1-label mono">TARGET &amp; CLOCK</span>
-                <strong class="tier1-val mono text-cyan">100 MHz</strong>
-                <span class="tier1-sub mono">AMD Kria K26 &bull; Timing MET</span>
+                <span class="tier1-label mono">MY RTL MODULE</span>
+                <strong class="tier1-val mono text-cyan">6 DFFs</strong>
+                <span class="tier1-sub mono">0-Cycle Tap &bull; 9&times;8-bit p00..p22 Out</span>
               </div>
               <div class="tier1-kpi">
-                <span class="tier1-label mono">TIMING &amp; UTILIZATION</span>
-                <strong class="tier1-val mono">3,560 LUTs</strong>
-                <span class="tier1-sub mono">3,406 FFs &bull; 2 BRAM &bull; WNS +0.322 ns</span>
+                <span class="tier1-label mono">PIPELINE INSTANCES</span>
+                <strong class="tier1-val mono">2 Stages</strong>
+                <span class="tier1-sub mono">u_win1 (Median) &amp; u_win2 (Sobel)</span>
               </div>
               <div class="tier1-kpi">
-                <span class="tier1-label mono">DATAPATH 512&times;512</span>
-                <strong class="tier1-val mono text-emerald">516,133</strong>
-                <span class="tier1-sub mono">0 Errors &bull; 64&times;64 &amp; 640&times;480 PASS</span>
+                <span class="tier1-label mono">SYNC &amp; VALID REGION</span>
+                <strong class="tier1-val mono text-emerald">(W-4)(H-4)</strong>
+                <span class="tier1-sub mono">x=2..W-3, y=2..H-3 Border Gating</span>
               </div>
               <div class="tier1-kpi">
-                <span class="tier1-label mono">AXI REGRESSION</span>
-                <strong class="tier1-val mono text-emerald">24,041</strong>
-                <span class="tier1-sub mono">0 Errors &bull; KR260 /dev/mem mmap()</span>
+                <span class="tier1-label mono">REPORT &amp; VERIFICATION</span>
+                <strong class="tier1-val mono text-emerald">Sec 7.2.3 &amp; 8.3</strong>
+                <span class="tier1-sub mono">i_en Stall Hold + Co-Owner Sec 7.2.8</span>
               </div>
             </div>
 
             <!-- Tier 2: Engineering Notes (Left) + Visual Evidence Tabs (Right) -->
             <div class="tier2-grid" data-evidence-group>
               <div class="tier2-notes">
-                <h4>My RTL Ownership &amp; Pipeline Design</h4>
+                <h4>My Contribution vs. Team Scope</h4>
                 <p class="notes-lead">
-                  Streaming FPGA SoC accelerator removing 5% salt-and-pepper noise via 3&times;3 median filtering
-                  and extracting binary Sobel edges with AXI4-Lite ARM Processing System control.
+                  In this 5-member KR260 SoC team project (teammates built line buffers, filters,
+                  AXI4-Lite wrapper, STA, and Linux MMIO), I owned the 3&times;3 sliding window RTL
+                  and co-designed pipeline synchronization.
                 </p>
                 <ul class="clean-list">
                   <li>
-                    <strong><code>window_3x3.v</code> Architecture:</strong> Implemented the 6-DFF shift-register
-                    3&times;3 sliding window (0-cycle combinational tap + 2 column delays), instantiated ahead of
-                    both <code>median_3x3</code> and <code>sobel_3x3</code> to drive parallel <code>p00..p22</code> taps.
+                    <strong><code>window_3x3.v</code> RTL (Owner):</strong> Implemented the 6-register
+                    horizontal shift array (<code>p00_reg, p01_reg</code> per row) with 0-cycle
+                    combinational rightmost taps (<code>i_row0..2</code>), synchronous reset (<code>i_rst</code>),
+                    and clock-enable stall freezing (<code>i_en</code>).
                   </li>
                   <li>
-                    <strong>Coordinate &amp; Valid Alignment:</strong> Co-designed <code>o_valid</code>,
-                    <code>o_x</code>, and <code>o_y</code> synchronization across both 3&times;3 stages, enforcing
-                    border validity <code>x = 2..W-3, y = 2..H-3</code> for <code>N_OUTPUT = (W-4)(H-4)</code>.
+                    <strong>Valid &amp; Coordinate Sync (Co-Owner with Tuệ):</strong> Aligned window
+                    valid gating (<code>x &gt;= 2, y &gt;= 2</code> for <code>u_win1</code>;
+                    <code>x &gt;= 3, y &gt;= 3</code> for <code>u_win2</code>) and center coordinates
+                    (<code>lb_x - 1, lb_y - 1</code>) for exact <code>(W-4)(H-4)</code> valid outputs.
                   </li>
                   <li>
-                    <strong>Physical Hardware Validation:</strong> Synthesized cleanly at 100 MHz on Kria K26
-                    (<code>WNS +0.322 ns</code>, <code>WHS +0.013 ns</code>) and validated via Linux
-                    <code>/dev/mem</code> + <code>mmap()</code>.
+                    <strong>Verification &amp; Docs (Sec 7.2.3 &amp; 8.3):</strong> Verified 3&times;3
+                    neighborhood assembly, <code>i_en</code> stall-hold timing, border behavior, and
+                    simulation waveforms for the window generator subsystem.
                   </li>
                 </ul>
               </div>
@@ -378,10 +382,10 @@
                     window_3x3.v Schematic
                   </button>
                   <button type="button" class="ev-tab" role="tab" aria-selected="false" data-tab="waveform">
-                    Timing Waveform
+                    window_3x3 Timing Waveform
                   </button>
                   <button type="button" class="ev-tab" role="tab" aria-selected="false" data-tab="pipeline">
-                    4-Stage Image Output
+                    Team Pipeline Output
                   </button>
                 </div>
 
@@ -499,7 +503,7 @@
                     </div>
                   </div>
                   <p class="figure-caption">
-                    512&times;512 bit-exact verification stages (516,133 datapath pixel checks with 0 errors against Python golden model).
+                    Team pipeline end-to-end output (512&times;512 frame; median/sobel stages by teammates fed by my <code>u_win1</code> and <code>u_win2</code> window generators).
                   </p>
                 </div>
               </div>
@@ -511,10 +515,10 @@
             <header class="case-header">
               <div class="case-title-group">
                 <div class="case-badges">
-                  <span class="badge badge-emerald mono">COS201 // DIGITAL COMMUNICATION FPGA</span>
-                  <span class="badge badge-neutral mono">RTL Lead: tx_rx_dsp_top.v &amp; bit_flip_channel.v</span>
+                  <span class="badge badge-emerald mono">COS201 // 5-MEMBER TEAM PROJECT</span>
+                  <span class="badge badge-neutral mono">My Scope: tx_rx_dsp_top.v, bit_flip_channel.v &amp; Sys Verify</span>
                 </div>
-                <h3>FPGA SECDED (8,4) + BPSK Communication Pipeline</h3>
+                <h3>SECDED (8,4) + BPSK Communication Pipeline &mdash; Top Integration &amp; Fault Channel</h3>
               </div>
               <a
                 class="btn btn-secondary btn-sm"
@@ -531,53 +535,57 @@
               </a>
             </header>
 
-            <!-- Tier 1: 4 Compact KPI Cards -->
-            <div class="tier1-kpi-row" aria-label="COS201 verified hardware metrics">
+            <!-- Tier 1: 4 Compact KPI Cards (Strictly Personal Scope) -->
+            <div class="tier1-kpi-row" aria-label="COS201 personal contribution metrics">
               <div class="tier1-kpi">
-                <span class="tier1-label mono">DSP SELF-CHECKING</span>
+                <span class="tier1-label mono">tx_rx_dsp_top VERIFY</span>
                 <strong class="tier1-val mono text-emerald">154,373</strong>
                 <span class="tier1-sub mono">0 Errors &bull; 384 Tx &bull; 24,576 Samples</span>
               </div>
               <div class="tier1-kpi">
-                <span class="tier1-label mono">UART END-TO-END</span>
+                <span class="tier1-label mono">bit_flip_channel VERIFY</span>
+                <strong class="tier1-val mono text-cyan">1,537</strong>
+                <span class="tier1-sub mono">0 Errors &bull; LFSR Seed 8'hA5 PASS</span>
+              </div>
+              <div class="tier1-kpi">
+                <span class="tier1-label mono">UART E2E SIMULATION</span>
                 <strong class="tier1-val mono text-emerald">577</strong>
                 <span class="tier1-sub mono">0 Errors &bull; 96 UART Requests PASS</span>
               </div>
               <div class="tier1-kpi">
-                <span class="tier1-label mono">FPGA UTILIZATION</span>
-                <strong class="tier1-val mono text-cyan">165 LUTs</strong>
-                <span class="tier1-sub mono">213 FFs &bull; 0 BRAM &bull; 0 DSP</span>
-              </div>
-              <div class="tier1-kpi">
-                <span class="tier1-label mono">TIMING &amp; POWER (50 MHz)</span>
-                <strong class="tier1-val mono text-cyan">+17.949 ns</strong>
-                <span class="tier1-sub mono">WNS Closure MET &bull; 0.289 W</span>
+                <span class="tier1-label mono">CHAPTER 1 &amp; RTL</span>
+                <strong class="tier1-val mono text-cyan">6 Stages</strong>
+                <span class="tier1-sub mono">Top Wrapper + 1-Cycle Fault Channel</span>
               </div>
             </div>
 
             <!-- Tier 2: Engineering Notes (Left) + Visual Evidence Stage (Right) -->
             <div class="tier2-grid" data-evidence-group>
               <div class="tier2-notes">
-                <h4>My RTL Ownership &amp; System Verification</h4>
+                <h4>My Contribution vs. Team Scope</h4>
                 <p class="notes-lead">
-                  Deterministic FPGA baseband communication pipeline combining Extended Hamming SECDED (8,4)
-                  coding, BPSK modulation/demodulation, LFSR channel error/noise injection, and UART control.
+                  In this 5-member baseband communication project (teammates built Hamming codec,
+                  BPSK mod/demod, LFSR noise injector, and Vivado synthesis analysis), I owned
+                  system-level integration, the bit-flip error channel, and system verification.
                 </p>
                 <ul class="clean-list">
                   <li>
-                    <strong>System Integration (<code>tx_rx_dsp_top.v</code>):</strong> Integrated all six
-                    DSP stages under synchronous active-low reset (<code>i_rst_n</code>), managing
-                    <code>i_start</code>/<code>o_done</code> boundaries and stage-to-stage <code>valid</code>/<code>done</code> handshakes.
+                    <strong>System Top-Level (<code>tx_rx_dsp_top.v</code>):</strong> Integrated all
+                    6 DSP modules under synchronous active-low reset (<code>i_rst_n</code>), latching
+                    <code>i_noise_level</code>/<code>i_err_mode</code> on <code>w_start_gated</code>
+                    (<code>i_start &amp;&amp; !r_busy</code>) and emitting a 1-clock <code>o_done</code> pulse.
                   </li>
                   <li>
-                    <strong>Error-Injection Channel (<code>bit_flip_channel.v</code>):</strong> Built the
-                    LFSR error injector (<code>seed = 8'hA5</code>, <code>poly = x^8+x^6+x^5+x^4+1</code>)
-                    supporting clean, single-bit, and collision-free double-bit fault modes.
+                    <strong>Bit-Flip Channel (<code>bit_flip_channel.v</code>):</strong> Implemented the
+                    1-cycle latency 8-bit LFSR fault injector (<code>poly = x^8+x^6+x^5+x^4+1</code>,
+                    <code>seed = 8'hA5</code> with zero-lockup guard) supporting clean, 1-bit, and
+                    collision-free 2-bit flips.
                   </li>
                   <li>
-                    <strong>System Regression &amp; Docs:</strong> Verified bit-exactness across
-                    <strong>154,373 DSP checks</strong> and <strong>96 UART end-to-end frames</strong>, and
-                    authored Chapter 1 (System Overview &amp; RTL Architecture).
+                    <strong>System Verification &amp; Chapter 1:</strong> Verified
+                    <code>tb_bit_flip_channel</code> (<strong>1,537 checks</strong>),
+                    <code>tb_tx_rx_dsp_top</code> (<strong>154,373 checks</strong> / 384 tx / 24,576 samples),
+                    and UART E2E simulation checks with 0 errors, and authored Chapter 1.
                   </li>
                 </ul>
               </div>
@@ -717,8 +725,8 @@
           <span class="card-kicker mono text-emerald">GET IN TOUCH</span>
           <h3>Direct Contact &amp; Resume</h3>
           <p class="contact-desc">
-            Available for <strong>RTL Design Intern</strong>, <strong>FPGA / Digital Verification Intern</strong>,
-            and <strong>Embedded Systems Intern</strong> roles.
+            Available for <strong>RTL Design Intern</strong>, <strong>Digital IC Design Intern</strong>,
+            and <strong>FPGA / RTL Verification Intern</strong> roles.
           </p>
 
           <div class="contact-items">
