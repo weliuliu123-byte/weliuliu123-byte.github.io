@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ha Gia Bao | Digital IC &amp; FPGA RTL Engineering Portfolio</title>
+  <title>Ha Gia Bao | IC Design, Verilog RTL &amp; Custom Layout Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Ha Gia Bao — IC Design student at FPT University specializing in Verilog RTL modules (window_3x3, tx_rx_dsp_top, bit_flip_channel), pipeline synchronization, and self-checking XSim verification."
+    content="Portfolio of Ha Gia Bao — IC Design student at FPT University specializing in Verilog RTL (window_3x3, tx_rx_dsp_top, bit_flip_channel), Cadence Virtuoso/Spectre CMOS layout, KiCad 2-layer PCB design, and Embedded Linux/C++."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,7 +72,7 @@
         <button type="button" class="btn btn-secondary btn-sm" id="nav-preview-cv">
           Preview CV
         </button>
-        <a class="btn btn-primary btn-sm" href="./Ha_Gia_Bao_Resume.pdf?v=20261114d" download="Ha_Gia_Bao_Resume.pdf">
+        <a class="btn btn-primary btn-sm" href="./Ha_Gia_Bao_Resume.pdf?v=20261118" download="Ha_Gia_Bao_Resume.pdf">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
@@ -90,24 +90,25 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="eyebrow mono">INTEGRATED CIRCUIT DESIGN // FPT UNIVERSITY</div>
-          <h1>Digital IC &amp; Verilog Student Portfolio</h1>
+          <h1>IC Design, Verilog RTL &amp; Circuit Portfolio</h1>
           <p class="hero-lead">
             I am <strong>Ha Gia Bao</strong>, a second-year <strong>IC Design</strong> student at
-            <strong>FPT University</strong> (Ho Chi Minh City). Across two team hardware projects, I
-            worked on individual <strong>Verilog</strong> modules (<code>window_3x3.v</code>,
-            <code>tx_rx_dsp_top.v</code>, <code>bit_flip_channel.v</code>), module wiring, and basic
-            simulation checks in <strong>Vivado</strong>.
+            <strong>FPT University</strong> (Ho Chi Minh City). My hands-on coursework spans
+            <strong>Verilog RTL</strong> (<code>window_3x3.v</code>, <code>tx_rx_dsp_top.v</code>,
+            <code>bit_flip_channel.v</code>) in <strong>Vivado XSim</strong>, transistor-level
+            <strong>Cadence Virtuoso &amp; Spectre</strong> CMOS layout (<code>DRC/LVS</code>), and
+            <strong>KiCad 2-layer PCB</strong> hardware for student research.
           </p>
 
           <!-- Clean Focus Summary (No Report Stats) -->
           <div class="hero-kpi-grid" aria-label="Core project focus">
             <div class="kpi-card">
-              <span class="kpi-value mono text-cyan">SECDED + BPSK</span>
-              <span class="kpi-label">Top-Level Wiring &amp; Bit-Flip Module</span>
+              <span class="kpi-value mono text-cyan">Verilog RTL + Vivado</span>
+              <span class="kpi-label">SECDED + BPSK &amp; Median&ndash;Sobel DSP</span>
             </div>
             <div class="kpi-card">
-              <span class="kpi-value mono text-emerald">Median&ndash;Sobel DSP</span>
-              <span class="kpi-label">3&times;3 Window Module &amp; Signal Alignment</span>
+              <span class="kpi-value mono text-emerald">Cadence + KiCad PCB</span>
+              <span class="kpi-label">CMOS Schematic/Layout &amp; 2-Layer Research PCB</span>
             </div>
           </div>
 
@@ -269,6 +270,67 @@
               <li>Vivado XSim</li>
               <li>Waveform Check</li>
               <li>Testbench Basics</li>
+            </ul>
+          </article>
+
+          <article class="card cap-card">
+            <div class="cap-icon text-emerald" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <span class="card-kicker mono text-emerald">04 // CUSTOM IC EDA</span>
+            <h3>Cadence Schematic &amp; Layout</h3>
+            <p>
+              Transistor-level CMOS design (Inverter, Full Adder, Master&ndash;Slave DFF) with
+              Spectre DC/VTC/timing analysis and DRC/LVS layout verification.
+            </p>
+            <ul class="pill-row">
+              <li>Cadence Virtuoso</li>
+              <li>Spectre</li>
+              <li>DRC / LVS</li>
+            </ul>
+          </article>
+
+          <article class="card cap-card">
+            <div class="cap-icon text-cyan" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                <path d="M6 12h4m4 0h4"></path>
+              </svg>
+            </div>
+            <span class="card-kicker mono text-cyan">05 // PCB &amp; CIRCUITS</span>
+            <h3>KiCad 2-Layer PCB Design</h3>
+            <p>
+              Schematic capture and 2-layer PCB routing in KiCad integrating an ESP32 MCU, power
+              regulator stage, sensor headers, and MOSFET fan driver.
+            </p>
+            <ul class="pill-row">
+              <li>KiCad PCB</li>
+              <li>Schematic</li>
+              <li>ESP32 + MOSFET</li>
+            </ul>
+          </article>
+
+          <article class="card cap-card">
+            <div class="cap-icon text-emerald" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+            <span class="card-kicker mono text-emerald">06 // SYSTEMS &amp; C++</span>
+            <h3>Embedded Linux &amp; C++11</h3>
+            <p>
+              ARM Cortex-A9 QEMU Linux 5.10 LTS, char drivers (<code>ioctl</code>), POSIX
+              <code>SCHED_FIFO</code> daemons, and QPC/PSAPI C++11 benchmarking.
+            </p>
+            <ul class="pill-row">
+              <li>C / C++11</li>
+              <li>Embedded Linux</li>
+              <li>POSIX RT</li>
             </ul>
           </article>
         </div>
@@ -626,6 +688,58 @@
             </div>
           </article>
         </div>
+
+        <div class="section-header" style="margin-top: 3rem;">
+          <p class="eyebrow mono">ADDITIONAL HARDWARE, EDA &amp; SYSTEMS WORK</p>
+          <h2>Custom IC Layout, KiCad PCB &amp; Embedded Systems</h2>
+        </div>
+
+        <div class="capabilities-grid">
+          <article class="card cap-card" id="project-ici211">
+            <span class="card-kicker mono text-emerald">ICI211 // CADENCE VIRTUOSO</span>
+            <h3>CMOS Circuit Design &amp; Physical Layout</h3>
+            <p>
+              Designed transistor-level schematics and ran Spectre simulations (NMOS/PMOS
+              I&ndash;V &amp; V<sub>th</sub>, VTC, transient delay, setup/hold/clk-to-Q) for CMOS
+              Inverter, 1-bit Full Adder, and Master&ndash;Slave D Flip-Flop, plus full-custom
+              layouts with DRC &amp; LVS checks.
+            </p>
+            <ul class="pill-row">
+              <li>Cadence Virtuoso</li>
+              <li>Spectre</li>
+              <li>DRC / LVS</li>
+            </ul>
+          </article>
+
+          <article class="card cap-card" id="project-cdp301">
+            <span class="card-kicker mono text-cyan">CDP301 // KICAD RESEARCH PCB</span>
+            <h3>Cold Chain Monitoring System</h3>
+            <p>
+              Captured the schematic and routed a custom 2-layer PCB in KiCad integrating an ESP32
+              MCU, voltage regulator, sensor headers, and MOSFET fan driver, paired with hysteresis
+              fan-control firmware for the team&rsquo;s research paper.
+            </p>
+            <ul class="pill-row">
+              <li>KiCad 2-Layer PCB</li>
+              <li>ESP32</li>
+              <li>Research Project</li>
+            </ul>
+          </article>
+
+          <article class="card cap-card" id="project-systems">
+            <span class="card-kicker mono text-emerald">LOS201 &amp; CSD // SYSTEMS</span>
+            <h3>Embedded Linux &amp; C++11 Benchmark</h3>
+            <p>
+              Configured Linux 5.10 LTS, U-Boot, and BusyBox on QEMU <code>vexpress-a9</code> with
+              char drivers and POSIX <code>SCHED_FIFO</code> (<a href="https://github.com/weliuliu123-byte/LOS" target="_blank" rel="noopener noreferrer">LOS</a>), plus a C++11 DLL vs. Two-Stack QPC/PSAPI benchmark (<a href="https://github.com/weliuliu123-byte/browser-history-manager" target="_blank" rel="noopener noreferrer">browser-history-manager</a>).
+            </p>
+            <ul class="pill-row">
+              <li>Embedded Linux</li>
+              <li>C++11 QPC</li>
+              <li>5/5 Unit Tests</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -704,7 +818,7 @@
               </button>
               <a
                 class="btn btn-primary btn-sm"
-                href="./Ha_Gia_Bao_Resume.pdf?v=20261114d"
+                href="./Ha_Gia_Bao_Resume.pdf?v=20261118"
                 download="Ha_Gia_Bao_Resume.pdf"
               >
                 Download Resume PDF
@@ -741,7 +855,7 @@
     <div class="modal-header">
       <h2 id="resume-modal-title" class="mono">Ha_Gia_Bao_Resume.pdf</h2>
       <div class="modal-actions">
-        <a class="btn btn-primary btn-sm" href="./Ha_Gia_Bao_Resume.pdf?v=20261114d" download="Ha_Gia_Bao_Resume.pdf">
+        <a class="btn btn-primary btn-sm" href="./Ha_Gia_Bao_Resume.pdf?v=20261118" download="Ha_Gia_Bao_Resume.pdf">
           Download PDF
         </a>
         <button type="button" class="btn btn-secondary btn-sm" id="close-resume-modal">
@@ -751,7 +865,7 @@
     </div>
     <div class="modal-body">
       <iframe
-        src="./Ha_Gia_Bao_Resume.pdf?v=20261114d"
+        src="./Ha_Gia_Bao_Resume.pdf?v=20261118"
         title="Ha Gia Bao Resume PDF Preview"
         class="resume-frame"
       ></iframe>
